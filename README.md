@@ -22,3 +22,14 @@ But, from this end user's perspective, there are a few problems that these syste
 * With very few exceptions (Ulysses app, for example), they pay very little attention to the purpose of note-taking, which isn't just to capture and organise ideas but to improve your work. Your notes should inform your projects, designs, and writing. To do so, you need to be able to easily turn your notes into documents that feed into your work.
 
 My goal with Colophon Cards is to create a web-based note-taking app for bookmarking and reading websites, ebooks, and documents. It needs to find a balance between ease-of-use and advanced features. It should have a user-subjective sharing model built in from the start where data is shared while the organisation is specific to each. Finally, it needs to provide straightforward tools for turning notes into documents for sharing with others.
+
+## The rest
+
+1. The Design Proposal
+2. The Data Model
+3. The Sharing Model
+4. Attachments, Bookmarks, and Reading
+5. The plan and broad timeline
+6. Questions that will need to be answered
+
+
