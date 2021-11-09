@@ -2,7 +2,7 @@
 
 ## Introduction
 
-You are reading the planning and design repository for Colophon Cards (Kólófón).
+You are reading the planning and design repository for Colophon Cards (Kólófón in Icelandic).
 
 This project aims to create a prototype for a bookmarking and reading-oriented note-taking app that pulls together many of the best practices in note-taking, hypertext, and reading theory.
 
