@@ -23,13 +23,16 @@ But, from this end user's perspective, there are a few problems that these syste
 
 My goal with Colophon Cards is to create a web-based note-taking app for bookmarking and reading websites, ebooks, and documents. It needs to find a balance between ease-of-use and advanced features. It should have a user-subjective sharing model built in from the start where data is shared while the organisation is specific to each. Finally, it needs to provide straightforward tools for turning notes into documents for sharing with others.
 
-## The rest
+## The rest (which I'll add over the next few days)
 
 1. The Design Proposal
 2. The Data Model
 3. The Sharing Model
 4. Attachments, Bookmarks, and Reading
-5. The plan and broad timeline
-6. Questions that will need to be answered
+5. The business model
+6. The audience and its watering holes
+7. Approaching the audience and establishing trust
+8. The plan and broad timeline
+9. Questions that will need to be answered
 
 
