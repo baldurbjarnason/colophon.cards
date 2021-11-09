@@ -1,26 +1,64 @@
 # Design Notes
 
-The initial loops
+## The high concept (in apps)
 
-## The thread
+Colophon Cards should be the marriage of [Notational Velocity's search-first navigational model](https://notational.net/) with Twitter's card stack model.
 
-1. The thread of cards.
-2. Type text in search box
-3. The thread only shows cards that begin with the search text until there is one (to update) or none.
-4. At any point in the search, the user can hit the button to create a card with that name or edit the top card and autocomplete the term to that card's name.
+Most people don't notice this but Twitter's conceptual model is that of a recursive stack of cards. Each tweet is about as much as you'd fit on one side of an index card. Each tweet is also a thread which is a stack of related cards. The timeline is a top-level thread/stack. This is the reason why the algorithmic timeline is such a disruption of how even non-techies use Twitter: it's a fundamental break in the service's basic design.
+
+From Notational Velocity's website:
+
+> The same area is used both for creating notes and searching. I.e., in the process of entering the title for a new note, related notes appear below, letting users file information there if they choose. Likewise, if a search reveals nothing, one need simply press return to create a note with the appropriate title.
+>
+> If a note's title starts with the search term(s), that title will be "auto-completed". This selects the note and consequently displays it. Correspondingly, selecting a note places its title in the search area (De-selecting the note restores the search terms).
+> 
+> To create a new note, just type its title and press return. Edit the note as needed in the bottom pane.
+>
+> To view or edit an existing note, type one or more words contained in its body or title. Reveal a note's content by using the up/down arrow keys to select it.
+
+My theory is that I can adapt this navigational model to work with the cards and stacks model popularized by Twitter.
+
+## Terminology
+
+*Threads*: I've decided to prefer threads over stacks as, even though, they would mean the same thing when you are building with cards as a core metaphor, they've come to have specialised meanings in UX and UI in general. Namely, a thread has come to be the standard term for "a linear sequence of things, some of which may also be similar linear sequences of their own".
+
+*Cards*: this has also become a generic term for a UI widget that contains some form of content.
+
+*Activity/Activity Stream*: often called event stream. This is a stream of the events/activities that form all of the data belonging to a particular user. This is usually an implementation detail (every social media platform implements something like this, as do most apps/services that need to sync data from one place to another). But I would like to test surfacing it as a UI element to see if it helps recall and aids understanding.
+
+## The main single-user loops
+
+### The thread
+
+The core UI view of the app is a thread of cards (or cards and actions on cards, if I follow through with the activity streams idea).
+
+The UI would be structured in a way that's similar to Twitter or Mastodon:
+
+1. At the top you have an input box.
+2.  Below it you have a stream of cards and activities in reverse-chronological order (newest first).
+3. Type text in the search box
+4. The thread is then filtered to only shows cards whose name begins with the search text until there is one (to update) or none.
+5. At any point in the search, the user can hit the button or press return to create a card with that name. Or they can edit the top card and autocomplete the term to that card's name.
+
+One of the core properties of a search-first UI like this (_true_ search first, not baked-on-because-we-don't-do-design search first like Google Drive) is that it makes you much more aware of the names of things and constantly surfaces older, relevant, cards as you are thinking about names for your new thing.
+
+The innovation here over Notational Velocity is that each card is also a thread and therefore a completely encapsulated search space. So, you can have a thread for ebooks. A thread for images. A thread for a project. For bookmarks.
 
 Thoughts:
 
-* I am tempted to have the thread be an activity stream. Instead of just the cards you would also have the activities on those cards listed in the thread. Like "You updated 'design notes'" or "You archived 'design notes'". I would like to see if having an explicit records on your activities in a thread is a helpful mnemonic or not. AFAIK there hasn't been research on whether this is helpful in a single user context so I'm tempted to test it out. 
+* I am tempted to have the thread be an activity stream. Instead of just the cards, you would also have the activities on those cards listed in the thread. Like "You updated 'design notes'" or "You archived 'design notes'". I would like to see if having explicit records on your activities in a thread is a helpful mnemonic or not. AFAIK there hasn't been much research on whether this is helpful in a single-user context so I'm tempted to test it out.
+* Full-text search would be on the roadmap but I need to demonstrate the practicality of the basic design model first.
+* The user shouldn't be able to create multiple cards with the same name in the same thread. Trying to create a card with a name identical to another would bring up an edit view for that card.
 
-## The edit
+## The edit view
 
 The created card has a name, replies (only displayed when you open the card as a thread), attachments, and a body. Possibly later a drag handle.
 
 
 Thoughts:
 
-* Should the body be rich text, plain text or markdown (irrespective of what it's stored as)? Markdown is the de facto note standard but is honestly a mess of partially compatible implementations. It also forces a modality to editing: notes have two completely different modes that look and work in very different ways. Plain text is universal but incredibly limited. Rich text has the most potential but is more complicated and harder to pull off.
+* Should the body be rich text, plain text or markdown (irrespective of what it's stored as)? Markdown is the de facto note standard but is honestly a mess of partially compatible implementations. It also forces a modality to your editing: notes have two completely different modes that look and work in very different ways. Plain text is universal but incredibly limited. A rich text interface has the most potential but is more complicated and harder to pull off.
+* More on modality: getting rid of modes does more to make a UI feel fast than most of the performance work engineers love to throw at problems like these. The "find item -> click edit on item -> edit -> save item" cycle is always going to feel slow, no matter how many optimisations through throw at it. If you figure out a way to make it "find item -> edit item" (no 'edit mode') then the UI will feel fast no matter how unoptimised the implementation is.
 
 ## Tags
 
@@ -36,15 +74,15 @@ Thoughts
 
 ## Workspaces?
 
-Should the user able to have multiple top level threads, each a separate workspace. Or do the child cards of a solo top thread serve the exact same function?
+Should the user be able to have multiple top-level threads, each a separate workspace? Or do the child cards of a solo top thread serve the same function?
 
 ## Pinning
 
-The UI should support pinned notes that are persistently floated to the top. One idea is that on displays that are wide enough the pinboard should be a sidebar space and that pinned card don't have to just be pinned up to but that they could be arranged freely in the sidebar space.
+The UI should support pinned notes that are persistently floated to the top. One idea is that on displays that are wide enough the pinboard should be a sidebar space and that pinned cards don't have to just be pinned up to but that they could be arranged freely in the sidebar space.
 
 ## Bookmarks
 
-Much like Twitter or Facebook, the URLs mentioned in the name or in the body are automatically added as attachments.
+Much like Twitter or Facebook, the URLs mentioned in the name or the body are automatically added as attachments.
 
 ## Attachments
 
@@ -72,4 +110,4 @@ How to design it, though, is a question, and it depends on the text format and l
 
 ## Sharing
 
-Designing the sharing and collaboration mode should be a separate document. But the threads and cards UI should be _single user_. Nothing should happen in your threads or two your cards that isn't done by you. Sharing should be about data, attachments and sharing your threads (or subsets of your threads) with others as documents.
+Designing the sharing and collaboration mode should be a separate document. But the threads and cards UI should be _single user_. Nothing should happen in your threads or to your cards that isn't done by you. Sharing should be about data, attachments and sharing your threads (or subsets of your threads) with others as documents.
