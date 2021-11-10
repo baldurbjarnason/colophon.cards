@@ -6,20 +6,20 @@
   <tr>
     <th>Model</th>
     <th>Owns/Can act on</th>
-    <th>Groups of</th>
+    <th>Groups of...</th>
     <th>References</th>
   </tr>
   <tr>
-    <td>User</td>
-    <td>Account, Auth/Email</td>
-    <td>User Group*</td>
-    <td>Auth/Email*</td>
+    <td>Authentication</td>
+    <td>Account</td>
+    <td></td>
+    <td>Confirmed Email*</td>
   </tr>
   <tr>
     <td>Account</td>
     <td>Activity</td>
-    <td>Shared Workspace*</td>
-    <td>Email*</td>
+    <td>Organisation Group*</td>
+    <td>Authentication</td>
   </tr>
   <tr>
     <td>Activity</td>
@@ -50,7 +50,7 @@ Most apps end up implementing some form of event streaming, if only to increase 
 - It's an open standard. There are already apps and services that use it so there's familiarity out there.
 - It makes implementing proper 'undo' much much simpler. You can essentially walk back the activity stream, one at a time.
 - It makes implementing proper offline apps simpler down the line. You can use the event stream to maintain a local, live copy of all of the user's data.
-- The activity stream vocabulary has the notions of Notes (what we will call Cards), Tags (not just tags, but also links), Attachments, Documents, and Actors (Users)
+- The activity stream vocabulary has the notions of Notes (what we will call Cards), Tags (not just tags, but also links), Attachments, Documents, and Actors (Accounts)
 - It's notion of threads is an Activity and all of its replies.
 
 ## Note (Card)
