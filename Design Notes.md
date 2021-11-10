@@ -30,7 +30,7 @@ _Activity/Activity Stream_: often called event stream. This is a stream of the e
 
 ### The thread
 
-![Sketch of how threads might work](images/threads-sketch.jpg)
+![Sketch of how threads might work](images/threads-sketch2.jpg)
 
 The core UI view of the app is a thread of cards (or cards and actions on cards, if I follow through with the activity streams idea).
 
