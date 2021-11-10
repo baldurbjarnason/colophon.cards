@@ -11,7 +11,7 @@ From Notational Velocity's website:
 > The same area is used both for creating notes and searching. I.e., in the process of entering the title for a new note, related notes appear below, letting users file information there if they choose. Likewise, if a search reveals nothing, one need simply press return to create a note with the appropriate title.
 >
 > If a note's title starts with the search term(s), that title will be "auto-completed". This selects the note and consequently displays it. Correspondingly, selecting a note places its title in the search area (De-selecting the note restores the search terms).
-> 
+>
 > To create a new note, just type its title and press return. Edit the note as needed in the bottom pane.
 >
 > To view or edit an existing note, type one or more words contained in its body or title. Reveal a note's content by using the up/down arrow keys to select it.
@@ -20,22 +20,24 @@ My theory is that I can adapt this navigational model to work with the cards and
 
 ## Terminology
 
-*Threads*: I've decided to prefer threads over stacks as, even though, they would mean the same thing when you are building with cards as a core metaphor, they've come to have specialised meanings in UX and UI in general. Namely, a thread has come to be the standard term for "a linear sequence of things, some of which may also be similar linear sequences of their own".
+_Threads_: I've decided to prefer threads over stacks as, even though, they would mean the same thing when you are building with cards as a core metaphor, they've come to have specialised meanings in UX and UI in general. Namely, a thread has come to be the standard term for "a linear sequence of things, some of which may also be similar linear sequences of their own".
 
-*Cards*: this has also become a generic term for a UI widget that contains some form of content.
+_Cards_: this has also become a generic term for a UI widget that contains some form of content.
 
-*Activity/Activity Stream*: often called event stream. This is a stream of the events/activities that form all of the data belonging to a particular user. This is usually an implementation detail (every social media platform implements something like this, as do most apps/services that need to sync data from one place to another). But I would like to test surfacing it as a UI element to see if it helps recall and aids understanding.
+_Activity/Activity Stream_: often called event stream. This is a stream of the events/activities that form all of the data belonging to a particular user. This is usually an implementation detail (every social media platform implements something like this, as do most apps/services that need to sync data from one place to another). But I would like to test surfacing it as a UI element to see if it helps recall and aids understanding.
 
 ## The main single-user loops
 
 ### The thread
+
+![Sketch of how threads might work](images/threads-sketch.jpg)
 
 The core UI view of the app is a thread of cards (or cards and actions on cards, if I follow through with the activity streams idea).
 
 The UI would be structured in a way that's similar to Twitter or Mastodon:
 
 1. At the top you have an input box.
-2.  Below it you have a stream of cards and activities in reverse-chronological order (newest first).
+2. Below it you have a stream of cards and activities in reverse-chronological order (newest first).
 3. Type text in the search box
 4. The thread is then filtered to only shows cards whose name begins with the search text until there is one (to update) or none.
 5. At any point in the search, the user can hit the button or press return to create a card with that name. Or they can edit the top card and autocomplete the term to that card's name.
@@ -46,19 +48,20 @@ The innovation here over Notational Velocity is that each card is also a thread 
 
 Thoughts:
 
-* I am tempted to have the thread be an activity stream. Instead of just the cards, you would also have the activities on those cards listed in the thread. Like "You updated 'design notes'" or "You archived 'design notes'". I would like to see if having explicit records on your activities in a thread is a helpful mnemonic or not. AFAIK there hasn't been much research on whether this is helpful in a single-user context so I'm tempted to test it out.
-* Full-text search would be on the roadmap but I need to demonstrate the practicality of the basic design model first.
-* The user shouldn't be able to create multiple cards with the same name in the same thread. Trying to create a card with a name identical to another would bring up an edit view for that card.
+- I am tempted to have the thread be an activity stream. Instead of just the cards, you would also have the activities on those cards listed in the thread. Like "You updated 'design notes'" or "You archived 'design notes'". I would like to see if having explicit records on your activities in a thread is a helpful mnemonic or not. AFAIK there hasn't been much research on whether this is helpful in a single-user context so I'm tempted to test it out.
+- Full-text search would be on the roadmap but I need to demonstrate the practicality of the basic design model first.
+- The user shouldn't be able to create multiple cards with the same name in the same thread. Trying to create a card with a name identical to another would bring up an edit view for that card.
 
 ## The edit view
 
-The created card has a name, replies (only displayed when you open the card as a thread), attachments, and a body. Possibly later a drag handle.
+![Sketch of how cards might work](images/card-sketch.jpg)
 
+The created card has a name, replies (only displayed when you open the card as a thread), attachments, and a body. Possibly later a drag handle.
 
 Thoughts:
 
-* Should the body be rich text, plain text or markdown (irrespective of what it's stored as)? Markdown is the de facto note standard but is honestly a mess of partially compatible implementations. It also forces a modality to your editing: notes have two completely different modes that look and work in very different ways. Plain text is universal but incredibly limited. A rich text interface has the most potential but is more complicated and harder to pull off.
-* More on modality: getting rid of modes does more to make a UI feel fast than most of the performance work engineers love to throw at problems like these. The "find item -> click edit on item -> edit -> save item" cycle is always going to feel slow, no matter how many optimisations through throw at it. If you figure out a way to make it "find item -> edit item" (no 'edit mode') then the UI will feel fast no matter how unoptimised the implementation is.
+- Should the body be rich text, plain text or markdown (irrespective of what it's stored as)? Markdown is the de facto note standard but is honestly a mess of partially compatible implementations. It also forces a modality to your editing: notes have two completely different modes that look and work in very different ways. Plain text is universal but incredibly limited. A rich text interface has the most potential but is more complicated and harder to pull off.
+- More on modality: getting rid of modes does more to make a UI feel fast than most of the performance work engineers love to throw at problems like these. The "find item -> click edit on item -> edit -> save item" cycle is always going to feel slow, no matter how many optimisations through throw at it. If you figure out a way to make it "find item -> edit item" (no 'edit mode') then the UI will feel fast no matter how unoptimised the implementation is.
 
 ## Tags
 
@@ -70,7 +73,7 @@ Every card is also a thread. The replies link on the card is a link to the card'
 
 Thoughts
 
-* I would like to avoid having a specific reply UI and instead keep the conceptual model the same all the way down.
+- I would like to avoid having a specific reply UI and instead keep the conceptual model the same all the way down.
 
 ## Workspaces?
 
@@ -90,7 +93,7 @@ File attachments are added via an attach button.
 
 Thought:
 
-* I could implement a website archiving system that archives a bookmark URL if you add the URL via the attachment UI instead of directly as text?
+- I could implement a website archiving system that archives a bookmark URL if you add the URL via the attachment UI instead of directly as text?
 
 ## Cross-linking
 
