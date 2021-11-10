@@ -7,30 +7,35 @@
     <th>Model</th>
     <th>Owns/Can act on</th>
     <th>Groups of</th>
+    <th>References</th>
   </tr>
   <tr>
     <td>User</td>
-    <td>Account</td>
-    <td>Shared Workspace* via owning Account</td>
+    <td>Account, Auth/Email</td>
+    <td>User Group*</td>
+    <td>Auth/Email*</td>
   </tr>
   <tr>
     <td>Account</td>
     <td>Activity</td>
     <td>Shared Workspace*</td>
+    <td>Email*</td>
   </tr>
   <tr>
     <td>Activity</td>
     <td>Cards</td>
     <td>Thread/Activity Stream</td>
+    <td>Account</td>
   </tr>
   <tr>
     <td>Card</td>
     <td>Attachments, Tags, Replies (child Activities)</td>
     <td>Thread via parent Activity</td>
+    <td>Parent Activity</td>
   </tr>
 </table>
 
-\* Shared Workspace should be discussed in the Sharing Model
+\* Discussed in the Sharing Model
 
 ## Activity Streams
 
