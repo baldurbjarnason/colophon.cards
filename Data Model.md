@@ -74,3 +74,9 @@ What to do about bookmarks and archiving? One of the big use cases for bookmarki
 Annotating a live site with a web service is doable via a live proxy but I have doubts about both the safety and ethics of providing such a service. (Hypothesis does it and it isn't the only disagreement I've had with Hypothesis folks about ethics and safety. IMO, the only thing that's preventing Hypothesis from being an abuse vector is that they are quite unpopular with mainstream users.) Making sure that it's a closed proxy, one that is only accessible to the user that bookmarks it, does mitigate a lot of my concerns as would stripping JS off the proxied site, but that's also likely to break most of them.
 
 The issue with annotation, bookmarking, and archiving largely go away with native apps as they can embed a proper sandboxed WebView and add annotation tools to that but a native app would be far, far down the line. The app needs to first be financially viable as a web service before I would work on an app.
+
+---
+
+_ETA:_
+
+The conceptual model from the user's perspective is straighforward. If it's a link/bookmark, then the copy exists somewhere else. If it's an attachment, then you have a copy. Deciding which way to go should be the user's call on a case by case basis. So, there should be a 'capture link as attachment' option somehow.
