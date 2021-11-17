@@ -31,10 +31,10 @@ My goal with Colophon Cards is to create a web-based note-taking app for bookmar
 
 ## The rest (which I'll add over the next few days)
 
-1. [Design Notes](notes/design-notes.md)
-2. [The Data Model](notes/data-model.md)
-3. [The Sharing Model](notes/sharing-model.md)
-4. [Attachments and Bookmarks](notes/attachments-bookmarks.md)
+1. [Design Notes](notes/design-notes/)
+2. [The Data Model](notes/data-model/)
+3. [The Sharing Model](notes/sharing-model/)
+4. [Attachments and Bookmarks](notes/attachments-bookmarks/)
 5. Reading and Viewing
 6. The business model
 7. The audience and its watering holes
