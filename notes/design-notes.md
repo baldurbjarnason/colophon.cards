@@ -1,3 +1,8 @@
+---
+title: Design Notes
+layout: layout.njk
+---
+
 # Design Notes
 
 ## The high concept (in apps)
@@ -30,7 +35,7 @@ _Activity/Activity Stream_: often called event stream. This is a stream of the e
 
 ### The thread
 
-![Sketch of how threads might work](images/threads-sketch2.jpg)
+![Sketch of how threads might work](/images/threads-sketch2.jpg)
 
 The core UI view of the app is a thread of cards (or cards and actions on cards, if I follow through with the activity streams idea).
 
@@ -54,12 +59,13 @@ Thoughts:
 
 ### The Card
 
-![Sketch of how cards might work](images/card-sketch.jpg)
+![Sketch of how cards might work](/images/card-sketch.jpg)
 
 The created card has a name, replies (only displayed when you open the card as a thread), attachments, and a body. Possibly later a drag handle.
 
 Thoughts:
 
+- "name" might be the wrong term for what is, in effect, the main text of the card and should be thought of as more akin to a tweet than document title. Maybe 'card text' (plain text, quick search) versus 'card body' (rich text, only findable using a full-text-search feature down the line).
 - Should the body be rich text, plain text or markdown (irrespective of what it's stored as)? Markdown is the de facto note standard but is honestly a mess of partially compatible implementations. It also forces a modality to your editing: notes have two completely different modes that look and work in very different ways. Plain text is universal but incredibly limited. A rich text interface has the most potential but is more complicated and harder to pull off.
 - More on modality: getting rid of modes does more to make a UI feel fast than most of the performance work engineers love to throw at problems like these. The "find item -> click edit on item -> edit -> save item" cycle is always going to feel slow, no matter how many optimisations through throw at it. If you figure out a way to make it "find item -> edit item" (no 'edit mode') then the UI will feel fast no matter how unoptimised the implementation is.
 

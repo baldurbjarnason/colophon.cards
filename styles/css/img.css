@@ -1,0 +1,7 @@
+img {
+  max-width: 100%;
+  height: auto;
+  margin: 1rem 0;
+  box-shadow: var(--shadow-elevation-medium);
+  border: 1px solid #f3f2e6;
+}

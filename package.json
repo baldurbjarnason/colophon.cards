@@ -1,0 +1,24 @@
+{
+  "name": "colophon.cards",
+  "version": "1.0.0",
+  "description": "The making of Colophon Cards",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build-styles": "esbuild styles/style.css --bundle --outfile=assets/style.css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/baldurbjarnason/colophon.cards.git"
+  },
+  "author": "",
+  "license": "UNLICENSED",
+  "bugs": {
+    "url": "https://github.com/baldurbjarnason/colophon.cards/issues"
+  },
+  "homepage": "https://github.com/baldurbjarnason/colophon.cards#readme",
+  "devDependencies": {
+    "@11ty/eleventy": "^0.12.1",
+    "esbuild": "^0.13.14"
+  }
+}

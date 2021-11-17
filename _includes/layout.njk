@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <!-- COMMON TAGS -->
+    {% block title %}
+    <!-- Blocks may include default content. -->
+    <title>{{ title }} – {{site.Title}}</title>
+    {% endblock %}
+    <!-- Search Engine -->
+    {# <meta
+      name="description"
+      content="{{if page }}{{ summary }}{{else}}{{site.Params.description}}{{end}}"
+    /> #}
+    {# <meta name="image" content="{{ param "image" }}"> #}
+    <!-- Schema.org for Google -->
+    <meta itemprop="name" content="{{ title }}" />
+    {# <meta
+      itemprop="description"
+      content="{{if IsPage}}{{ .Summary }}{{else}}{{.Site.Params.description}}{{end}}"
+    /> #}
+    {# <meta itemprop="image" content="{{ $.Param "image" }}"> #}
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:title" content="{{ title }}" />
+    {# <meta
+      name="twitter:description"
+      content="{{if IsPage}}{{ summary }}{{else}}{{site.Params.description}}{{end}}"
+    /> #}
+    {# <!-- <meta name="twitter:site" content="@{{ $.Site.Params.twitter }}">
+	<meta name="twitter:creator" content="@{{ $.Site.Params.twitter }}">
+	<meta name="twitter:image:src" content="{{ $.Param "image" }}"> -->
+    <!-- Twitter - Article -->
+    <!-- Open Graph general (Facebook, Pinterest & Google+) --> #}
+    {# <meta name="og:title" content="{{ title }}" />
+    <meta
+      name="og:description"
+      content="{{if isPage}}{{ summary }}{{else}}{{site.Params.description}}{{end}}"
+    /> #}
+    {# {{ if Param "image" }}<meta name="og:image"
+    content="{{site.BaseURL}}{{param "image" }}">{{ end }} #}
+    <meta name="og:url" content="{{ permalink }}" />
+    <meta name="og:site_name" content="{{site.Title}}" />
+    <meta name="og:type" content="article" />
+    <!-- Open Graph - Article -->
+    <meta name="article:author" content="https://www.baldurbjarnason.com/" />
+    <meta name="author" content="Baldur Bjarnason" />
+    {# <meta name="article:tag" content="{{ range params.tags }}{{.}} {{end}}" /> #}
+    {# {{ $scss := resources.Get "styles/main.scss" | toCSS | resources.Minify |
+    resources.Fingerprint }} #}
+    {# <link rel="stylesheet" href="{{ $scss.RelPermalink }}" /> #}
+    {# {{ block "Styles" . }} {{ end }} #}
+
+    <link href="/assets/style.css" rel="stylesheet" />
+    <link href="/styles/source-serif-var/source-serif.css" rel="stylesheet" />
+    {# <link href="{{ "feed.xml" | absURL }}" rel="alternate"
+    type="application/rss+xml" title="All posts for {{ .Site.Title }}" /> #}
+    {# <link 
+    href="{{ "index.xml" | absURL }}" rel="feed" type="application/rss+xml"
+    title="All posts for {{ .Site.Title }}" />
+    <link href="https://micro.blog/baldur" rel="me" />
+    {{ if $.Page.IsHome}}
+    <meta property="og:type" content="profile" />
+    <meta property="profile:first_name" content="Baldur" />
+    <meta property="profile:last_name" content="Bjarnason" />
+    {{ end }} {{ block "Scripts" . }}
+    <!-- 
+      <script type="module" src="/src/index.js"></script> -->
+    {{ end }} {{ block "Fonts" . }}
+    <!-- 
+      <script type="module" src="/src/index.js"></script> -->
+    {{ end }} #}
+    {# <link rel="manifest" href="/manifest.json" /> #}
+  </head>
+  <body class="">
+    <nav class="Top" aria-labelledby="title">
+      <div id="title"><a href="/">Colophon Cards</a></div>
+      <ul>
+{% for item in collections.all %}
+  <li><a href="{{item.url}}">{{ item.data.title }}</a></li>
+{% endfor %}
+      </ul>
+    </nav>
+    {# <header class="header">
+      <div class="Description">
+        <div class="Title"><a href="/">{{ title }}</a></div>
+      </div>
+    </header> #}
+</ul>
+    {% block main %} 
+    <main class="source-serif-ss03 source-serif-slashed-zero source-serif">
+        {{ content | safe }}
+
+    </main>
+
+    {% endblock %} 
+    {%block footer %}
+    <footer><p>
+      
+        Discuss or comment on this in the <a href="https://github.com/baldurbjarnason/colophon.cards">GitHub repository</a>
+    </p>
+    </footer> {% endblock  %}
+    <div class="Bottom"></div>
+  </body>
+</html>

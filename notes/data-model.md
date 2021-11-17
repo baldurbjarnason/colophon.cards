@@ -1,6 +1,11 @@
+---
+title: The Data Model
+layout: layout.njk
+---
+
 # The Data Model
 
-![Sketch of the broad data model](images/data-model.jpg)
+![Sketch of the broad data model](/images/data-model.jpg)
 
 <table>
   <tr>

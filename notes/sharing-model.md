@@ -1,3 +1,8 @@
+---
+title: The Sharing Model
+layout: layout.njk
+---
+
 # The Sharing Model
 
 ## Why the tech industry's standard sharing model doesn't work for this app

@@ -1,0 +1,26 @@
+th {
+  font-weight: bold;
+  font-variant-caps: small-caps;
+  font-variation-settings: "wght" 700, "opsz" 8;
+  font-size: 0.8rem;
+  padding: 0.3125rem;
+  text-align: left;
+  hyphens: none;
+}
+
+td {
+  padding: 0.3125rem;
+  font-size: 0.8rem;
+  font-variation-settings: "wght" 400, "opsz" 8;
+  text-align: left;
+}
+
+table {
+  table-layout: fixed;
+  width: 100%;
+  border-collapse: collapse;
+}
+
+tr {
+  border-bottom: 1px solid #f3f2e6;
+}

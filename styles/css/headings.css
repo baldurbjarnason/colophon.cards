@@ -1,0 +1,24 @@
+h3,
+h4 {
+  font-variant-caps: small-caps;
+  font-size: 1.675rem;
+}
+
+h1 {
+  font-size: 5rem;
+  line-height: 5.625rem;
+}
+
+h2 {
+  font-size: 2.5rem;
+  line-height: 3.25rem;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  text-align: left;
+}

@@ -1,4 +1,10 @@
-# Colophon Cards
+---
+title: About Colophon Cards
+layout: layout.njk
+permalink: /
+---
+
+# About Colophon Cards
 
 ## Introduction
 
@@ -25,12 +31,13 @@ My goal with Colophon Cards is to create a web-based note-taking app for bookmar
 
 ## The rest (which I'll add over the next few days)
 
-1. [Design Notes](Design%20Notes.md)
-2. [The Data Model](Data%20Model.md)
-3. [The Sharing Model](Sharing%20Model.md)
-4. Attachments, Bookmarks, and Reading
-5. The business model
-6. The audience and its watering holes
-7. Approaching the audience and establishing trust
-8. The plan and broad timeline
-9. Questions that will need to be answered
+1. [Design Notes](notes/design-notes.md)
+2. [The Data Model](notes/data-model.md)
+3. [The Sharing Model](notes/sharing-model.md)
+4. [Attachments and Bookmarks](notes/attachments-bookmarks.md)
+5. Reading and Viewing
+6. The business model
+7. The audience and its watering holes
+8. Approaching the audience and establishing trust
+9. The plan and broad timeline
+10. Questions that will need to be answered

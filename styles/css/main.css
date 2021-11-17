@@ -1,0 +1,38 @@
+main {
+  display: grid;
+  background-color: #fffffd;
+  grid-template-columns: 2.5rem 1fr 2.5rem;
+  grid-row-gap: var(--vertical-break, 1rem);
+  row-gap: var(--vertical-break, 1rem);
+  margin: 0 2.5rem;
+  padding-top: 5rem;
+  padding-bottom: 5rem;
+  box-shadow: var(--shadow-elevation-low);
+  border: 1px solid #f3f2e6;
+  border-radius: 0.3rem;
+  hyphens: auto;
+  --base-color: #333333;
+  --shadow-color: 60deg 25% 63%;
+  --shadow-elevation-low: 0.1px 0.3px 0.3px hsl(var(--shadow-color) / 0.41),
+    0.2px 0.5px 0.6px -1.5px hsl(var(--shadow-color) / 0.37),
+    0.6px 1.3px 1.5px -3px hsl(var(--shadow-color) / 0.32);
+  --shadow-elevation-medium: 0.1px 0.3px 0.3px hsl(var(--shadow-color) / 0.43),
+    0.4px 1px 1.1px -1px hsl(var(--shadow-color) / 0.4),
+    1.1px 2.6px 3px -2px hsl(var(--shadow-color) / 0.36),
+    2.9px 6.5px 7.5px -3px hsl(var(--shadow-color) / 0.32);
+  --shadow-elevation-high: 0.1px 0.3px 0.3px hsl(var(--shadow-color) / 0.4),
+    0.7px 1.6px 1.8px -0.4px hsl(var(--shadow-color) / 0.39),
+    1.3px 3px 3.4px -0.9px hsl(var(--shadow-color) / 0.37),
+    2.3px 5.2px 6px -1.3px hsl(var(--shadow-color) / 0.35),
+    3.8px 8.6px 9.9px -1.7px hsl(var(--shadow-color) / 0.34),
+    6.2px 13.9px 16px -2.1px hsl(var(--shadow-color) / 0.32),
+    9.6px 21.6px 24.8px -2.6px hsl(var(--shadow-color) / 0.3),
+    14.3px 32.3px 37.1px -3px hsl(var(--shadow-color) / 0.28);
+}
+
+main > * {
+  grid-column: 2 / -2;
+  margin-top: 0;
+  margin-bottom: 0;
+  text-align: justify;
+}
