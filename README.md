@@ -36,7 +36,7 @@ My goal with Colophon Cards is to create a web-based note-taking app for bookmar
 3. [The Sharing Model](notes/03-sharing-model/)
 4. [Attachments and Bookmarks](notes/04-attachments-bookmarks/)
 5. [Reading and Viewing](notes/05-reading-viewing/)
-6. The business model
+6. [The Business Model](notes/06-business-model/)
 7. The audience and its watering holes
 8. Approaching the audience and establishing trust
 9. The plan and broad timeline
