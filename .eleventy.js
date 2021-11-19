@@ -9,4 +9,13 @@ module.exports = function (eleventyConfig) {
   // Keeps the same directory structure.
   eleventyConfig.addPassthroughCopy("styles/source-serif-var");
   eleventyConfig.addPassthroughCopy("assets");
+  let markdownIt = require("markdown-it");
+  let options = {
+    html: true,
+    breaks: true,
+    linkify: true,
+    typographer: true,
+  };
+
+  eleventyConfig.setLibrary("md", markdownIt(options));
 };

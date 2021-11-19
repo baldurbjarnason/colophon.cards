@@ -21,5 +21,8 @@
   "devDependencies": {
     "@11ty/eleventy": "^0.12.1",
     "esbuild": "^0.13.14"
+  },
+  "dependencies": {
+    "markdown-it": "^10.0.0"
   }
 }
