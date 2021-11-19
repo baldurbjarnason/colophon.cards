@@ -40,4 +40,4 @@ My goal with Colophon Cards is to create a web-based note-taking app for bookmar
 7. The audience and its watering holes
 8. Approaching the audience and establishing trust
 9. The plan and broad timeline
-10. Questions that will need to be answered
+10. [Questions that will need to be answered](notes/10-questions/)
