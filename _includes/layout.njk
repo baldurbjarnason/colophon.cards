@@ -73,10 +73,10 @@
     {{ end }} #}
     {# <link rel="manifest" href="/manifest.json" /> #}
   </head>
-  <body class=""><div class="container">
+  <body class=""><div class="container {{tags}}">
     
       <nav class="Top" aria-labelledby="title">
-        <div id="title"><a href="/">Colophon Cards</a></div>
+        <div id="title"><a href="/">The Making of<br>Colophon Cards</a></div>
         <ol>
     {% for item in collections.all %}
     <li><a href="{{item.url}}">{{ item.data.title }}</a></li>
@@ -91,6 +91,7 @@
     </ul>
       {% block main %}
       <main class="source-serif-ss03 source-serif-slashed-zero source-serif">
+        <div class="time">{{page.date.toLocaleDateString("en-GB", { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' })}}</div>
           {{ content | safe }}
       </main>
       {% endblock %}

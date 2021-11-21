@@ -25,3 +25,7 @@ nav.Top ol li {
   text-decoration: none;
   color: var(--base-color);
 }
+
+.front .Top {
+  display: none;
+}

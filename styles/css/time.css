@@ -1,0 +1,12 @@
+.time {
+  font-size: 1.5rem;
+  line-height: 1;
+  margin: 0;
+  padding: 0;
+  font-variation-settings: "wght" 200, "opsz" 36;
+  font-variant-caps: small-caps;
+}
+
+.front .time {
+  display: none;
+}

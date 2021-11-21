@@ -1,14 +1,14 @@
 main {
   display: grid;
-  background-color: #fffffd;
+  /* background-color: #fffffd; */
   grid-template-columns: 2.5rem 1fr 2.5rem;
   grid-row-gap: var(--vertical-break, 1rem);
   row-gap: var(--vertical-break, 1rem);
-  margin: 0 2.5rem;
+  margin: 0;
   padding-top: 5rem;
   padding-bottom: 5rem;
-  box-shadow: var(--shadow-elevation-low);
-  border: 1px solid #f3f2e6;
+  /* box-shadow: var(--shadow-elevation-low); */
+  /* border: 1px solid #f3f2e6; */
   border-radius: 0.3rem;
   hyphens: auto;
   --base-color: #333333;

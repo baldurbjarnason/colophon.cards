@@ -1,10 +1,12 @@
 ---
-title: About Colophon Cards
+title: The Making of Colophon Cards
 layout: layout.njk
+eleventyExcludeFromCollections: true
 permalink: /
+tags: front
 ---
 
-# About Colophon Cards
+# The Making of Colophon Cards
 
 ## Introduction
 
@@ -29,7 +31,7 @@ But, from this end user's perspective, there are a few problems that these syste
 
 My goal with Colophon Cards is to create a web-based note-taking app for bookmarking and reading websites, ebooks, and documents. It needs to find a balance between ease-of-use and advanced features. It should have a user-subjective sharing model built in from the start where data is shared while the organisation is specific to each. Finally, it needs to provide straightforward tools for turning notes into documents for sharing with others.
 
-## The rest (which I'll add over the next few days)
+## Notes on making Colophon Cards
 
 1. [Design Notes](notes/01-design-notes/)
 2. [The Data Model](notes/02-data-model/)
