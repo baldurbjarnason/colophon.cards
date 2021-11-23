@@ -1,5 +1,6 @@
 img {
-  max-width: 100%;
+  width: 100%;
+  max-width: 900px;
   height: auto;
   margin: 1rem 0;
   box-shadow: var(--shadow-elevation-medium);

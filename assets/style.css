@@ -113,9 +113,10 @@ main > * {
 
 /* styles/css/img.css */
 img {
-  max-width: 100%;
+  width: 100%;
+  max-width: 900px;
   height: auto;
-  margin: 1rem 0;
+  margin: 1rem auto;
   box-shadow: var(--shadow-elevation-medium);
   border: 1px solid #f3f2e6;
 }
