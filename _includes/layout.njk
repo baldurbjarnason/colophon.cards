@@ -78,8 +78,8 @@
       <nav class="Top" aria-labelledby="title">
         <div id="title"><a href="/">The Making of<br>Colophon Cards</a></div>
         <ol>
-    {% for item in collections.all %}
-    <li><a href="{{item.url}}">{{ item.data.title }}</a></li>
+    {% for item in collections.posts %}
+    <li><a href="{{item.url}}"{% if page.url == item.url %} aria-current="page"{% endif %}>{{ item.data.title }}</a></li>
     {% endfor %}
         </ol>
       </nav>

@@ -22,6 +22,10 @@ module.exports = function (eleventyConfig) {
   };
   eleventyConfig.addPlugin(pluginRss);
 
+  eleventyConfig.addCollection("feedPosts", function (collectionApi) {
+    // get unsorted items
+    return collectionApi.getFilteredByTag("posts").slice(-8).reverse();
+  });
   eleventyConfig.setLibrary("md", markdownIt(options));
   return {
     markdownTemplateEngine: "njk",
