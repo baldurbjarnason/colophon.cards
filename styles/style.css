@@ -1,4 +1,4 @@
-@import url(./css/_01-settings.css);
+@import url(./css/settings.css);
 @import url(./css/main.css);
 @import url(./css/img.css);
 @import url(./css/headings.css);
@@ -10,3 +10,5 @@
 @import url(./css/time.css);
 @import url(./css/center.css);
 @import url(./css/formkit.css);
+@import url(./css/nav-main.css);
+@import url(./css/links.css);

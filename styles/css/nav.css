@@ -3,7 +3,8 @@ nav.Top {
   grid-template-columns: 40ch 1fr;
   grid-gap: 1rem;
   padding: 1.25rem 2.5rem;
-
+  border-top: 1rem solid #f0f0dd;
+  border-bottom: 1rem solid #f0f0dd;
   background-color: #f4f4e2;
   margin: 3.75rem 0 1.25rem;
 }

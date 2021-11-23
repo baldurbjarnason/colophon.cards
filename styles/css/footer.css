@@ -4,6 +4,8 @@ footer {
   grid-gap: 1rem;
   padding: 1.25rem 0;
   margin: 1.25rem 0 1.25rem;
+  border-top: 1rem solid #f0f0dd;
+  border-bottom: 1rem solid #f0f0dd;
   background-color: #f4f4e2;
 }
 footer > * {

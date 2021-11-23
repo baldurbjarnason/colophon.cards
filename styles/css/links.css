@@ -1,0 +1,22 @@
+a:link {
+  --link-color: var(--link-normal);
+  color: hsl(var(--link-color));
+  text-decoration-line: underline;
+  text-decoration-style: solid;
+  text-decoration-color: hsl(var(--link-color) / 0.125);
+  text-decoration-thickness: from-font;
+  text-decoration-style: double;
+}
+a:active {
+  color: hsl(var(--link-active));
+  text-decoration-color: hsl(var(--link-active) / 0.125);
+}
+a:visited {
+  color: hsl(var(--link-visited));
+  text-decoration-color: hsl(var(--link-visited) / 0.125);
+}
+
+a:hover {
+  color: hsl(var(--link-hover));
+  text-decoration-color: hsl(var(--link-hover) / 0.125);
+}

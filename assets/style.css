@@ -1,4 +1,4 @@
-/* styles/css/_01-settings.css */
+/* styles/css/settings.css */
 :root {
   --green-back: #baffc9;
   --green-border: #a9eeb8;
@@ -10,6 +10,13 @@
   --yellow-border: #eeeea9;
   --base-back: #fff;
   --base-border: #fafaef;
+  --link-normal: 195.3 95.6% 26.5%;
+  --link-active: 44.7 95.6% 26.5%;
+  --link-hover:
+    75.3,
+    95.6%,
+    26.5%;
+  --link-visited: 11 100% 25.7%;
 }
 :root {
   --faded-yellow: #f8f7f2;
@@ -116,7 +123,7 @@ img {
   width: 100%;
   max-width: 900px;
   height: auto;
-  margin: 1rem auto;
+  margin: 1rem 0;
   box-shadow: var(--shadow-elevation-medium);
   border: 1px solid #f3f2e6;
 }
@@ -156,6 +163,8 @@ nav.Top {
   grid-template-columns: 40ch 1fr;
   grid-gap: 1rem;
   padding: 1.25rem 2.5rem;
+  border-top: 1rem solid #f0f0dd;
+  border-bottom: 1rem solid #f0f0dd;
   background-color: #f4f4e2;
   margin: 3.75rem 0 1.25rem;
 }
@@ -213,6 +222,8 @@ footer {
   grid-gap: 1rem;
   padding: 1.25rem 0;
   margin: 1.25rem 0 1.25rem;
+  border-top: 1rem solid #f0f0dd;
+  border-bottom: 1rem solid #f0f0dd;
   background-color: #f4f4e2;
 }
 footer > * {
@@ -258,6 +269,49 @@ footer > * {
 }
 .formkit-form .formkit-fields {
   margin-top: 2rem;
+}
+
+/* styles/css/nav-main.css */
+.main-navigation {
+  display: flex;
+  justify-content: space-between;
+  padding: 1.25rem 2.5rem;
+}
+.main-navigation ol {
+  list-style: none;
+  display: flex;
+  flex-direction: row;
+  margin: 0;
+  padding: 0;
+  gap: 1rem;
+}
+.main-navigation a {
+  text-decoration: none;
+  font-variant-caps: all-small-caps;
+  color: var(--link-normal);
+}
+
+/* styles/css/links.css */
+a:link {
+  --link-color: var(--link-normal);
+  color: hsl(var(--link-color));
+  text-decoration-line: underline;
+  text-decoration-style: solid;
+  text-decoration-color: hsl(var(--link-color) / 0.125);
+  text-decoration-thickness: from-font;
+  text-decoration-style: double;
+}
+a:active {
+  color: hsl(var(--link-active));
+  text-decoration-color: hsl(var(--link-active) / 0.125);
+}
+a:visited {
+  color: hsl(var(--link-visited));
+  text-decoration-color: hsl(var(--link-visited) / 0.125);
+}
+a:hover {
+  color: hsl(var(--link-hover));
+  text-decoration-color: hsl(var(--link-hover) / 0.125);
 }
 
 /* styles/style.css */

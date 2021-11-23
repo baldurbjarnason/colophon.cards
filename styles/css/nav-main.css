@@ -1,0 +1,20 @@
+.main-navigation {
+  display: flex;
+  justify-content: space-between;
+  padding: 1.25rem 2.5rem;
+}
+
+.main-navigation ol {
+  list-style: none;
+  display: flex;
+  flex-direction: row;
+  margin: 0;
+  padding: 0;
+  gap: 1rem;
+}
+
+.main-navigation a {
+  text-decoration: none;
+  font-variant-caps: all-small-caps;
+  color: var(--link-normal);
+}
