@@ -1,0 +1,13 @@
+.formkit-form[data-uid] h2,
+.formkit-form p {
+  line-height: 1.25;
+  margin: 1rem 0;
+}
+
+.seva-form.formkit-form[data-uid] .formkit-column[data-element] {
+  padding-bottom: 4rem;
+}
+
+.formkit-form .formkit-fields {
+  margin-top: 2rem;
+}

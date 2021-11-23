@@ -1,3 +1,5 @@
+const pluginRss = require("@11ty/eleventy-plugin-rss");
+
 module.exports = function (eleventyConfig) {
   // Output directory: _site
 
@@ -16,6 +18,10 @@ module.exports = function (eleventyConfig) {
     linkify: true,
     typographer: true,
   };
+  eleventyConfig.addPlugin(pluginRss);
 
   eleventyConfig.setLibrary("md", markdownIt(options));
+  return {
+    markdownTemplateEngine: "njk",
+  };
 };

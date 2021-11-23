@@ -1,6 +1,8 @@
 ---
 title: Reading and Viewing
 layout: layout.njk
+tags: posts
+date: 2021-11-17
 ---
 
 # Reading and Viewing
@@ -108,3 +110,5 @@ But then I'm reminded of an observation many have made throughout the years: wri
 This approach also supports adding some form of modality to writing. One of my main hesitations around markdown (or any form of markup, to be honest) is that they necessarily add read and write modes to your UI. But if the reading mode has its own tools and affordances, that usefulness could make up for the usability drag that added modes would introduce.
 
 The relationship between card bodies and the cards themselves still need to be clarified and hashed out. But the reading mode of your own markdown text looks like the primary candidate for prototyping the reading view.
+
+{% include 'mailingform.njk' %}

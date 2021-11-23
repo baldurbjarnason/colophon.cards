@@ -1,6 +1,8 @@
 ---
 title: The Data Model
 layout: layout.njk
+tags: posts
+date: 2021-11-10
 ---
 
 # The Data Model
@@ -85,3 +87,5 @@ The issue with annotation, bookmarking, and archiving largely go away with nativ
 _ETA:_
 
 The conceptual model from the user's perspective is straighforward. If it's a link/bookmark, then the copy exists somewhere else. If it's an attachment, then you have a copy. Deciding which way to go should be the user's call on a case by case basis. So, there should be a 'capture link as attachment' option somehow.
+
+{% include 'mailingform.njk' %}

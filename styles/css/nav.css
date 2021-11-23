@@ -2,7 +2,10 @@ nav.Top {
   display: grid;
   grid-template-columns: 40ch 1fr;
   grid-gap: 1rem;
-  margin: 3.75rem 2.5rem 1.25rem;
+  padding: 1.25rem 2.5rem;
+
+  background-color: #f4f4e2;
+  margin: 3.75rem 0 1.25rem;
 }
 
 nav.Top ol,

@@ -1,9 +1,13 @@
 ---
 title: Attachments and Bookmarks
 layout: layout.njk
+tags: posts
+date: 2021-11-17
 ---
 
 # Attachments and Bookmarks
+
+(I liked this note so much that I reworked it into the main pitch for Colophon Cards and put it on the [front page](/).)
 
 ## Why does Colophon Cards need attachments and bookmarks?
 
@@ -43,7 +47,7 @@ File names aren't much help as they are, by convention, very short, regularly ge
 
 But an email, especially one that you wrote yourself, is much simpler to find. You may not remember the exact text but you probably have a rough idea and, because you know yourself, you can guess at the words and terms you were likely to use.
 
-Which is why sending an email to youself with a file as an attachment is often a better filing system than throwing into your shared Dropbox.
+Which is why sending an email to yourself with a file as an attachment is often a better filing system than throwing into your shared Dropbox.
 
 ### Hence Colophonic Cards
 
@@ -62,3 +66,5 @@ Like a tweet, each card can have attachments. Some of these are references to th
 The distinction between the two, how it is made apparent in the design, whether it should exist, and to what degree they should differ, is one of the biggest unanswered questions in the initial design for Colophon Cards.
 
 The potential functional difference between the two should be clearer in the note on reading.
+
+{% include 'mailingform.njk' %}

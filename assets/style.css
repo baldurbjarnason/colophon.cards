@@ -154,7 +154,9 @@ nav.Top {
   display: grid;
   grid-template-columns: 40ch 1fr;
   grid-gap: 1rem;
-  margin: 3.75rem 2.5rem 1.25rem;
+  padding: 1.25rem 2.5rem;
+  background-color: #f4f4e2;
+  margin: 3.75rem 0 1.25rem;
 }
 nav.Top ol,
 nav.Top ol li {
@@ -208,7 +210,9 @@ footer {
   display: grid;
   grid-template-columns: 2.5rem 1fr 2.5rem;
   grid-gap: 1rem;
-  margin: 1.25rem 2.5rem 1.25rem;
+  padding: 1.25rem 0;
+  margin: 1.25rem 0 1.25rem;
+  background-color: #f4f4e2;
 }
 footer > * {
   grid-column: 2 / -2;
@@ -234,6 +238,25 @@ footer > * {
 }
 .front .time {
   display: none;
+}
+
+/* styles/css/center.css */
+.center {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* styles/css/formkit.css */
+.formkit-form[data-uid] h2,
+.formkit-form p {
+  line-height: 1.25;
+  margin: 1rem 0;
+}
+.seva-form.formkit-form[data-uid] .formkit-column[data-element] {
+  padding-bottom: 4rem;
+}
+.formkit-form .formkit-fields {
+  margin-top: 2rem;
 }
 
 /* styles/style.css */

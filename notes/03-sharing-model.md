@@ -1,6 +1,8 @@
 ---
 title: The Sharing Model
 layout: layout.njk
+tags: posts
+date: 2021-11-10
 ---
 
 # The Sharing Model
@@ -155,3 +157,5 @@ That means:
     <td>Account</td>
   </tr>
 </table>
+
+{% include 'mailingform.njk' %}

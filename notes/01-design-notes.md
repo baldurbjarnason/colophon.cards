@@ -1,6 +1,8 @@
 ---
 title: Design Notes
 layout: layout.njk
+tags: posts
+date: 2021-11-10
 ---
 
 # Design Notes
@@ -124,3 +126,5 @@ How to design it, though, is a question, and it depends on the text format and l
 ### Sharing
 
 Designing the sharing and collaboration mode should be a separate document. But the threads and cards UI should be _single user_. Nothing should happen in your threads or to your cards that isn't done by you. Sharing should be about data, attachments and sharing your threads (or subsets of your threads) with others as documents.
+
+{% include 'mailingform.njk' %}

@@ -1,6 +1,8 @@
 ---
 title: Business Model
 layout: layout.njk
+tags: posts
+date: 2021-11-19
 ---
 
 # Business Model
@@ -69,3 +71,5 @@ Later on, if the app proves itself and gains traction and the margins support it
 One issue that a lot of beginning SaaSes run into is that the lower tier users tend to draw all of your attention and incur higher support costs so it's often better to not enter that market unless you're sure you can handle it.
 
 I don't need to decide on the specific approach at this stage. But it's useful when prototyping and designing to know what sort of margins you're aiming for.
+
+{% include 'mailingform.njk' %}
