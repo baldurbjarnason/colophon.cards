@@ -1,7 +1,7 @@
 .main-navigation {
   display: flex;
   justify-content: space-between;
-  padding: 1.25rem 2.5rem;
+  padding: 1.25rem var(--side-margins);
 }
 
 .main-navigation ol {

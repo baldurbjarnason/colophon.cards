@@ -5,8 +5,8 @@ h4 {
 }
 
 h1 {
-  font-size: 5rem;
-  line-height: 5.625rem;
+  font-size: var(--title-font-size);
+  line-height: calc(var(--title-font-size) + 0.625rem);
 }
 
 h2 {

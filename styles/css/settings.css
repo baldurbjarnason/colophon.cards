@@ -14,20 +14,31 @@
   --link-hover: 75.3, 95.6%, 26.5%;
   --link-visited: 11 100% 25.7%;
 }
-:root {
-  --faded-yellow: #f8f7f2;
-  --base-color: #3b3b31;
-}
 
+/* margins */
+:root {
+  --side-margins: 2.5rem;
+}
 /* Fonts */
 
 :root {
-  --font-size: 1.1rem;
-  --font-size: clamp(0.85rem, 0.5rem + 1.5vw, 1.25rem);
   --line-height: 1.42;
   --paragraph-spacing: 1rem;
   --vertical-break: 1.25rem;
   --font-size: calc(0.85rem + 0.4vw);
+  --title-font-size: calc(var(--font-size) * 5);
+}
+
+@media screen and (max-width: 700px) {
+  :root {
+    --side-margins: 1.25rem;
+    --title-font-size: calc(var(--font-size) * 3.5);
+  }
+}
+
+:root {
+  --faded-yellow: #f8f7f2;
+  --base-color: #3b3b31;
 }
 
 html {

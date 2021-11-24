@@ -5,6 +5,7 @@
   padding: 0;
   font-variation-settings: "wght" 200, "opsz" 36;
   font-variant-caps: small-caps;
+  text-align: left;
 }
 
 .front .time {

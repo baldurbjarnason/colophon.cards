@@ -8,15 +8,18 @@ a:link {
   text-decoration-style: double;
 }
 a:active {
+  --link-color: var(--link-active);
   color: hsl(var(--link-active));
   text-decoration-color: hsl(var(--link-active) / 0.125);
 }
 a:visited {
+  --link-color: var(--link-visited);
   color: hsl(var(--link-visited));
   text-decoration-color: hsl(var(--link-visited) / 0.125);
 }
 
 a:hover {
+  --link-color: var(--link-hover);
   color: hsl(var(--link-hover));
   text-decoration-color: hsl(var(--link-hover) / 0.125);
 }

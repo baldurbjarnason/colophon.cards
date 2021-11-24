@@ -1,29 +1,48 @@
 nav.Top {
-  display: grid;
-  grid-template-columns: 40ch 1fr;
-  grid-gap: 1rem;
-  padding: 1.25rem 2.5rem;
+  display: flex;
+  flex-wrap: wrap;
+  /* grid-template-columns: 40ch 1fr;
+  grid-gap: 1rem; */
+  padding: 1.25rem var(--side-margins);
   border-top: 1rem solid #f0f0dd;
   border-bottom: 1rem solid #f0f0dd;
   background-color: #f4f4e2;
   margin: 3.75rem 0 1.25rem;
 }
 
-nav.Top ol,
-nav.Top ol li {
+.Top ol,
+.Top ol li {
   padding: 0;
   margin: 0;
   text-align: left;
+  flex: 1 1 22ch;
+}
+
+.Top ol li {
+  padding: 0.25rem 0.5rem;
+  margin: 0;
+  margin-left: -0.5rem;
 }
 
 .Top ol {
   columns: 25ch auto;
+  font-size: 0.85rem;
+  font-variation-settings: "wght" 400, "opsz" 8;
+  list-style-position: inside;
+}
+
+.Top [aria-current] {
+  background-color: white;
+  outline: 3px double hsl(60 9.3% 21.2% / 0.25);
 }
 
 #title {
   font-variation-settings: "wght" 700, "opsz" 60;
   font-size: 2.5rem;
   line-height: 1;
+  flex: 0 0 auto;
+  margin-right: 2.5rem;
+  margin-bottom: var(--side-margins);
 }
 #title a {
   text-decoration: none;
