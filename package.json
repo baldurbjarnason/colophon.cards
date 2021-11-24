@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build-styles": "esbuild styles/style.css --bundle --outfile=assets/style.css",
+    "build-styles": "esbuild styles/style.css --bundle --outfile=assets/style.css --loader:.svg=file",
     "build": "eleventy"
   },
   "repository": {

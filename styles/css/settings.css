@@ -50,6 +50,11 @@ html {
   padding: 0;
   color: var(--base-color);
 }
+body {
+  background-image: url("../../assets/background.svg");
+  background-size: contain;
+  background-repeat: no-repeat;
+}
 :root {
   --shadow-color: 60deg 7% 65%;
   --shadow-elevation-low: 0.3px 0.5px 0.6px hsl(var(--shadow-color) / 0.37),

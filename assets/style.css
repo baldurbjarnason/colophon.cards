@@ -52,6 +52,11 @@ html {
   padding: 0;
   color: var(--base-color);
 }
+body {
+  background-image: url(./background-YWZSCXJK.svg);
+  background-size: contain;
+  background-repeat: no-repeat;
+}
 :root {
   --shadow-color: 60deg 7% 65%;
   --shadow-elevation-low:
