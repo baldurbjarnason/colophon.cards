@@ -53,7 +53,7 @@ html {
   color: var(--base-color);
 }
 body {
-  background-image: url(./background-YWZSCXJK.svg);
+  background-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZlcnNpb249IjEuMiIgYmFzZVByb2ZpbGU9InRpbnkiIHdpZHRoPSI2ODIiIGhlaWdodD0iMTAyNCIgc3R5bGU9ImJhY2tncm91bmQtY29sb3I6dHJhbnNwYXJlbnQiIG9wYWNpdHk9Ii4wNjEiPjxwYXRoIGZpbGw9IiM1QzYxNjciIGZpbGwtb3BhY2l0eT0iLjUwMiIgZD0iTTAgNDc5VjBoMjE3eiIvPjxwYXRoIGZpbGw9IiM2QjcxNzciIGZpbGwtb3BhY2l0eT0iLjUwMiIgZD0ibTI5NCAwIDM4NiA0ODkgMi00ODl6Ii8+PC9zdmc+);
   background-size: contain;
   background-repeat: no-repeat;
 }
@@ -201,6 +201,7 @@ nav.Top {
 .Top [aria-current] {
   background-color: white;
   outline: 3px double hsl(60 9.3% 21.2% / 0.25);
+  outline-offset: -3px;
 }
 #title {
   font-variation-settings: "wght" 700, "opsz" 60;
@@ -269,13 +270,14 @@ footer > * {
 
 /* styles/css/time.css */
 .time {
-  font-size: 1.5rem;
+  font-size: 1.1rem;
   line-height: 1;
   margin: 0;
   padding: 0;
-  font-variation-settings: "wght" 200, "opsz" 36;
-  font-variant-caps: small-caps;
+  font-variant-caps: all-small-caps;
   text-align: left;
+  font-variation-settings: "wght" 400, "opsz" 8;
+  color: #777;
 }
 .front .time {
   display: none;
@@ -328,6 +330,7 @@ main .formkit-form[data-uid] {
   text-decoration: none;
   font-variant-caps: all-small-caps;
   color: var(--link-normal);
+  font-variation-settings: "wght" 400, "opsz" 8;
 }
 
 /* styles/css/links.css */

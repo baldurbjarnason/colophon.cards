@@ -1,11 +1,12 @@
 .time {
-  font-size: 1.5rem;
+  font-size: 1.1rem;
   line-height: 1;
   margin: 0;
   padding: 0;
-  font-variation-settings: "wght" 200, "opsz" 36;
-  font-variant-caps: small-caps;
+  font-variant-caps: all-small-caps;
   text-align: left;
+  font-variation-settings: "wght" 400, "opsz" 8;
+  color: #777;
 }
 
 .front .time {

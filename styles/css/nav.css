@@ -34,6 +34,7 @@ nav.Top {
 .Top [aria-current] {
   background-color: white;
   outline: 3px double hsl(60 9.3% 21.2% / 0.25);
+  outline-offset: -3px;
 }
 
 #title {

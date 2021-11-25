@@ -40,8 +40,8 @@
     /> #}
     {# {{ if Param "image" }}<meta name="og:image"
     content="{{site.BaseURL}}{{param "image" }}">{{ end }} #}
-    <meta name="og:url" content="{{ permalink }}" />
-    <meta name="og:site_name" content="{{site.Title}}" />
+    <meta name="og:url" content="https://www.colophon.cards{{ page.url }}" />
+    <meta name="og:site_name" content="The Making of Colophon Cards" />
     <meta name="og:type" content="article" />
     <!-- Open Graph - Article -->
     <meta name="article:author" content="https://www.baldurbjarnason.com/" />
@@ -54,7 +54,7 @@
 
     <link href="/assets/style.css" rel="stylesheet" />
     <link href="/styles/source-serif-var/source-serif.css" rel="stylesheet" />
-    <link href="{{ "feed.xml" | absURL }}" rel="alternate"
+    <link href="https://www.colophon.cards/feed.xml" rel="alternate"
     type="application/rss+xml" title="All posts for The Making of Colophon Cards" />
     {# <link 
     href="{{ "index.xml" | absURL }}" rel="feed" type="application/rss+xml"

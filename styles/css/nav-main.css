@@ -17,4 +17,5 @@
   text-decoration: none;
   font-variant-caps: all-small-caps;
   color: var(--link-normal);
+  font-variation-settings: "wght" 400, "opsz" 8;
 }
