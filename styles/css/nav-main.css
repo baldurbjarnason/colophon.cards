@@ -19,3 +19,7 @@
   color: var(--link-normal);
   font-variation-settings: "wght" 400, "opsz" 8;
 }
+
+#site a {
+  letter-spacing: 0.5px;
+}

@@ -53,3 +53,8 @@ nav.Top {
 .front .Top {
   display: none;
 }
+
+.Top .logo {
+  font-size: 70%;
+  letter-spacing: 0.25px;
+}

@@ -218,6 +218,10 @@ nav.Top {
 .front .Top {
   display: none;
 }
+.Top .logo {
+  font-size: 70%;
+  letter-spacing: 0.25px;
+}
 
 /* styles/css/tables.css */
 th {
@@ -332,6 +336,9 @@ main .formkit-form[data-uid] {
   color: var(--link-normal);
   font-variation-settings: "wght" 400, "opsz" 8;
 }
+#site a {
+  letter-spacing: 0.5px;
+}
 
 /* styles/css/links.css */
 a:link {
@@ -357,6 +364,12 @@ a:hover {
   --link-color: var(--link-hover);
   color: hsl(var(--link-hover));
   text-decoration-color: hsl(var(--link-hover) / 0.125);
+}
+
+/* styles/css/logo.css */
+.logo {
+  font-variant-caps: all-small-caps;
+  font-variation-settings: "wght" 400, "opsz" 8;
 }
 
 /* styles/style.css */
