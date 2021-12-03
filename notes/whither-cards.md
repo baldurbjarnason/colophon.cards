@@ -14,6 +14,8 @@ stylesheets:
 
 # HTML Sketches: Whither Cards?
 
+**Warning: this post contains mockups done in HTML and CSS which aren't likely to work well in feed readers.**
+
 The list in the previous post has a lot of [open questions](/notes/10-questions/) related to cards. Now, there are a lot of approaches to answering these sort of questions---research, surveys, testing---but in this specific context I think it would be a mistake to dive right into one of those.
 
 - I've already done a lot of research on this, it's been a big part of my life for the past five years
