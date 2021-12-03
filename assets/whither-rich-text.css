@@ -1,0 +1,402 @@
+.Card {
+  --border-color: 0 0% 100%;
+  max-width: 80ch;
+  padding: 0 0 2rem;
+  margin: 2rem auto;
+  border: 0.5rem solid hsl(var(--border-color) / 0.5);
+  box-shadow: var(--shadow-elevation-medium);
+  position: relative;
+  display: grid;
+  grid-template-columns: 1rem 1fr 1rem;
+  background-color: #fafafa;
+  background-color: white;
+}
+
+.Card[data-editing] {
+  box-shadow: var(--shadow-elevation-high);
+  --border-color: var(--link-normal);
+}
+
+.CardBody {
+  text-align: left;
+  hyphens: manual;
+  padding: 1rem 0 2rem;
+  border: 3px none transparent;
+  white-space: pre-wrap;
+  font-family: inherit;
+  font-size: 100%;
+  grid-column: 2 / 2;
+  grid-row: 2 / 2;
+  margin: 0;
+}
+.CardTextarea {
+  text-align: left;
+  hyphens: manual;
+  padding: 1rem 0 2rem;
+  border: 3px none #d5d5c9;
+  white-space: pre-wrap;
+  font-family: inherit;
+  font-size: 100%;
+  grid-column: 2 / 2;
+  grid-row: 2 / 2;
+  margin: 0;
+  font-variation-settings: inherit;
+  font-feature-settings: inherit;
+  background-color: white;
+  overflow: hidden;
+}
+
+.CardDate {
+  padding: 0.75rem 0rem 0.75rem;
+  font-size: 0.85rem;
+  color: #555;
+  font-variant-caps: all-small-caps;
+}
+
+.CardEdit {
+  position: absolute;
+  bottom: -0.5rem;
+  right: -0.5rem;
+  display: flex;
+}
+[data-editing] .CardEdit {
+  --shadow-color: 0 0% 31%;
+  --shadow-elevation-high: 0.1px 0.3px 0.3px hsl(var(--shadow-color) / 0.4),
+    0.7px 1.6px 1.8px -0.4px hsl(var(--shadow-color) / 0.39),
+    1.3px 3px 3.4px -0.9px hsl(var(--shadow-color) / 0.37),
+    2.3px 5.2px 6px -1.3px hsl(var(--shadow-color) / 0.35),
+    3.8px 8.6px 9.9px -1.7px hsl(var(--shadow-color) / 0.34),
+    6.2px 13.9px 16px -2.1px hsl(var(--shadow-color) / 0.32),
+    9.6px 21.6px 24.8px -2.6px hsl(var(--shadow-color) / 0.3),
+    14.3px 32.3px 37.1px -3px hsl(var(--shadow-color) / 0.28);
+}
+
+.CardHeader {
+  display: flex;
+  justify-content: space-between;
+  grid-column: 2 / 2;
+  align-items: center;
+  color: #555;
+}
+
+.CardButtons {
+  margin: 0;
+}
+
+.CardTextButton {
+  box-sizing: border-box;
+  border: none;
+  background-color: transparent;
+  color: hsl(var(--link-normal));
+  font-family: inherit;
+  padding: 0.25rem 0.5rem 0.25rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-variant-caps: all-small-caps;
+  font-weight: 300;
+  font-size: 0.85rem;
+  cursor: pointer;
+  font-variation-settings: "wght" 600, "opsz" 8;
+}
+.CardTextButton:hover {
+  color: hsl(var(--link-hover));
+}
+.CardButton:hover {
+  background-color: hsl(var(--link-hover));
+  color: white;
+}
+.CardButton {
+  --border-color: 0 0% 94.1%;
+  box-sizing: border-box;
+  border: none;
+  background-color: transparent;
+  font-family: inherit;
+  padding: 0.45rem 2rem 0.5rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: none;
+  transition: box-shadow 250ms ease-in-out;
+  font-variant-caps: all-small-caps;
+  font-weight: 300;
+  font-size: 0.85rem;
+  cursor: pointer;
+  font-variation-settings: "wght" 600, "opsz" 8;
+  color: hsl(var(--link-normal));
+}
+
+.CardButton svg,
+.CardTextButton svg {
+  margin-right: 1px;
+}
+
+[data-editing] .CardButton {
+  --border-color: 0 0% 94.1%;
+  box-sizing: border-box;
+  border: none;
+  background-color: hsl(var(--border-color));
+  font-family: inherit;
+  padding: 0.45rem 2rem 0.5rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: var(--shadow-elevation-high);
+  transition: box-shadow 250ms ease-in-out;
+  font-variant-caps: all-small-caps;
+  font-weight: 300;
+  font-size: 0.85rem;
+  cursor: pointer;
+  font-variation-settings: "wght" 600, "opsz" 8;
+}
+
+.CardButton.Primary {
+  --link-color: var(--link-normal);
+  background-color: hsl(var(--link-color));
+  color: white;
+  box-shadow: var(--shadow-elevation-high);
+}
+.CardButton:hover {
+  background-color: hsl(var(--link-hover));
+  color: white;
+}
+
+.CardButton:active {
+  box-shadow: var(--shadow-elevation-medium);
+}
+
+/* The Single Mode version */
+.PlainCard {
+  --border-color: 0 0% 100%;
+  max-width: 80ch;
+  width: 100%;
+  padding: 0;
+  margin: 2rem auto;
+  box-shadow: var(--shadow-elevation-medium);
+  position: relative;
+  display: grid;
+  grid-template-columns: 2rem 1fr 1rem;
+  background-color: #fafafa;
+  background-color: white;
+  grid-column-gap: 0.5rem;
+  transition: box-shadow 125ms ease-in-out;
+}
+
+.PlainCard:focus-within {
+  box-shadow: var(--shadow-elevation-high);
+  outline: 3px solid #eee;
+}
+/* 
+.Card[data-editing] {
+  box-shadow: var(--shadow-elevation-high);
+  --border-color: var(--link-normal);
+} */
+
+.PlainCardBody {
+  text-align: left;
+  hyphens: manual;
+  padding: 1rem 2rem 1rem;
+  border: 3px none transparent;
+  white-space: pre-wrap;
+  font-family: inherit;
+  font-size: 100%;
+  grid-column: 2 / 2;
+  grid-row: 2 / 2;
+  margin: 0;
+}
+.PlainCardTextarea {
+  text-align: left;
+  hyphens: manual;
+  padding: 1rem 0 1rem;
+  border: 3px none #d5d5c9;
+  white-space: pre-wrap;
+  font-family: inherit;
+  font-size: 100%;
+  grid-column: 2 / 2;
+  grid-row: 2 / 2;
+  margin: 0;
+  font-variation-settings: inherit;
+  font-feature-settings: inherit;
+  background-color: white;
+  width: 100%;
+  box-sizing: border-box;
+  height: 10rem;
+}
+.PlainCardEditable {
+  text-align: left;
+  hyphens: manual;
+  padding: 0;
+  border: 3px none #d5d5c9;
+  white-space: pre-wrap;
+  font-family: inherit;
+  font-size: 100%;
+  grid-column: 2 / 2;
+  grid-row: 2 / 2;
+  margin: 0;
+  font-variation-settings: inherit;
+  font-feature-settings: inherit;
+  background-color: white;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.PlainCardDate {
+  padding: 0.75rem 0rem 0.75rem;
+  font-size: 0.85rem;
+  color: #555;
+  font-variant-caps: all-small-caps;
+}
+
+.PlainCardEdit {
+  position: absolute;
+  bottom: -0.5rem;
+  right: -0.5rem;
+  display: flex;
+}
+[data-editing] .CardEdit {
+  --shadow-color: 0 0% 31%;
+  --shadow-elevation-high: 0.1px 0.3px 0.3px hsl(var(--shadow-color) / 0.4),
+    0.7px 1.6px 1.8px -0.4px hsl(var(--shadow-color) / 0.39),
+    1.3px 3px 3.4px -0.9px hsl(var(--shadow-color) / 0.37),
+    2.3px 5.2px 6px -1.3px hsl(var(--shadow-color) / 0.35),
+    3.8px 8.6px 9.9px -1.7px hsl(var(--shadow-color) / 0.34),
+    6.2px 13.9px 16px -2.1px hsl(var(--shadow-color) / 0.32),
+    9.6px 21.6px 24.8px -2.6px hsl(var(--shadow-color) / 0.3),
+    14.3px 32.3px 37.1px -3px hsl(var(--shadow-color) / 0.28);
+}
+
+.PlainCardHeader {
+  display: flex;
+  justify-content: space-between;
+  grid-column: 2 / 2;
+  align-items: center;
+  color: #555;
+  font-variation-settings: "wght" 400, "opsz" 8;
+}
+
+.PlainCardFooter {
+  display: flex;
+  justify-content: space-between;
+  grid-column: 2 / -1;
+  align-items: center;
+  color: #555;
+  padding: 0 1rem;
+}
+
+.PlainCardButtons {
+  margin: 0;
+}
+
+.PlainCardTextButton {
+  box-sizing: border-box;
+  border: none;
+  background-color: transparent;
+  color: hsl(var(--link-normal));
+  font-family: inherit;
+  padding: 0.25rem 0.5rem 0.25rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-variant-caps: all-small-caps;
+  font-weight: 300;
+  font-size: 0.85rem;
+  cursor: pointer;
+  font-variation-settings: "wght" 600, "opsz" 8;
+}
+.PlainCardTextButton:hover {
+  color: hsl(var(--link-hover));
+}
+.PlainCardButton:hover {
+  background-color: hsl(var(--link-hover));
+  color: white;
+}
+.PlainCardButton {
+  --border-color: 0 0% 94.1%;
+  box-sizing: border-box;
+  border: none;
+  background-color: hsl(var(--border-color));
+  font-family: inherit;
+  padding: 0.45rem 2rem 0.5rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: var(--shadow-elevation-high);
+  transition: box-shadow 250ms ease-in-out;
+  font-variant-caps: all-small-caps;
+  font-weight: 300;
+  font-size: 0.85rem;
+  cursor: pointer;
+  font-variation-settings: "wght" 600, "opsz" 8;
+}
+
+.PlainCardButton svg,
+.PlainCardTextButton svg {
+  margin-right: 1px;
+}
+.PlainCardButton.Primary {
+  --link-color: var(--link-normal);
+  background-color: hsl(var(--link-color));
+  color: white;
+  box-shadow: var(--shadow-elevation-high);
+}
+.PlainCardButton:hover {
+  background-color: hsl(var(--link-hover));
+  color: white;
+}
+
+.PlainCardButton:active {
+  box-shadow: var(--shadow-elevation-medium);
+}
+.PlainCardSidebar {
+  grid-column: 1 / 1;
+  grid-row: 1 / 4;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: #555;
+  flex-direction: column;
+  padding: 0.5rem 0;
+  background-color: rgb(248 248 248);
+}
+
+.PlainCardGrabHandle {
+  width: 0;
+  border: none;
+  border-left: 4px solid #e1e1e1;
+  height: 100%;
+  margin: 2.5rem 0;
+}
+.PlainCardGrabHandle:hover {
+  cursor: grab;
+}
+
+.PlainCardHeader.Handle {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+
+.PlainCardGrabHandle.Header {
+  width: 5rem;
+  border: none;
+  margin: 0 auto;
+  height: 0.5rem;
+  display: inline-flex;
+  padding: calc(0.25rem + 4px) 0.5rem 0.25rem;
+  border-radius: 8px;
+}
+.PlainCardGrabHandle.Header:hover {
+  background-color: #f0f0f0;
+}
+
+.PlainCardGrabHandle.Header::before {
+  content: "";
+  border-top: 4px solid #ccc;
+  height: 0.25rem;
+  width: 100%;
+  display: block;
+  margin: auto;
+}
+
+.CardNumber {
+  text-align: right;
+}

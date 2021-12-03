@@ -53,6 +53,14 @@
     {# {{ block "Styles" . }} {{ end }} #}
 
     <link href="/assets/style.css" rel="stylesheet" />
+
+{% for style in stylesheets %}
+    <link href="/assets/{{style}}" rel="stylesheet" />
+{% endfor %}
+{% for script in scripts %}
+    <script src="/assets/{{script}}" defer></script>
+{% endfor %}
+
     <link href="/styles/source-serif-var/source-serif.css" rel="stylesheet" />
     <link href="https://www.colophon.cards/feed.xml" rel="alternate"
     type="application/rss+xml" title="All posts for The Making of Colophon Cards" />
@@ -97,7 +105,7 @@
     </ul>
       {% block main %}
       <main class="source-serif-ss03 source-serif-slashed-zero source-serif">
-        <div class="time">{{page.date.toLocaleDateString("en-GB", { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' })}}</div>
+        <div class="time">{{page.date.toLocaleDateString("en-GB", { year: 'numeric', month: 'long', day: 'numeric' })}}</div>
           {{ content | safe }}
       </main>
       {% endblock %}

@@ -1,0 +1,243 @@
+/* The Single Mode version */
+.FieldCard {
+  --border-color: 0 0% 100%;
+  max-width: 80ch;
+  width: 100%;
+  padding: 0;
+  margin: 2rem auto;
+  box-shadow: var(--shadow-elevation-medium);
+  position: relative;
+  display: grid;
+  grid-template-columns: 2rem 1fr 1rem;
+  background-color: #fafafa;
+  background-color: white;
+  grid-gap: 0.5rem;
+  transition: box-shadow 125ms ease-in-out;
+}
+
+.FieldCard:focus-within {
+  box-shadow: var(--shadow-elevation-high);
+  outline: 3px solid #eee;
+}
+/* 
+.Card[data-editing] {
+  box-shadow: var(--shadow-elevation-high);
+  --border-color: var(--link-normal);
+} */
+
+.FieldCardSummary {
+  grid-column: 2 / 2;
+}
+
+.FieldCardLabel {
+  font-size: 0.85rem;
+  cursor: pointer;
+  font-variation-settings: "wght" 600, "opsz" 8;
+  font-variant-caps: all-small-caps;
+  display: block;
+}
+
+.FieldCardInput {
+  text-align: left;
+  hyphens: manual;
+  padding: 0.25rem;
+  border: 1px solid #f0f0f0;
+  white-space: pre-wrap;
+  font-family: inherit;
+  font-size: 100%;
+  margin: 0;
+  font-variation-settings: inherit;
+  font-feature-settings: inherit;
+  background-color: white;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.FieldCardBody {
+  text-align: left;
+  hyphens: manual;
+  padding: 1rem 2rem 1rem;
+  border: 3px none transparent;
+  white-space: pre-wrap;
+  font-family: inherit;
+  font-size: 100%;
+  margin: 0;
+}
+.FieldCardEditable {
+  text-align: left;
+  hyphens: manual;
+  padding: 0;
+  padding: 0.25rem;
+  border: 1px solid #f0f0f0;
+  white-space: pre-wrap;
+  font-family: inherit;
+  font-size: 100%;
+  grid-column: 2 / 2;
+  margin: 0;
+  font-variation-settings: inherit;
+  font-feature-settings: inherit;
+  background-color: white;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.FieldCardDate {
+  padding: 0.75rem 0rem 0.75rem;
+  font-size: 0.85rem;
+  color: #555;
+  font-variant-caps: all-small-caps;
+}
+
+.FieldCardEdit {
+  position: absolute;
+  bottom: -0.5rem;
+  right: -0.5rem;
+  display: flex;
+}
+[data-editing] .CardEdit {
+  --shadow-color: 0 0% 31%;
+  --shadow-elevation-high: 0.1px 0.3px 0.3px hsl(var(--shadow-color) / 0.4),
+    0.7px 1.6px 1.8px -0.4px hsl(var(--shadow-color) / 0.39),
+    1.3px 3px 3.4px -0.9px hsl(var(--shadow-color) / 0.37),
+    2.3px 5.2px 6px -1.3px hsl(var(--shadow-color) / 0.35),
+    3.8px 8.6px 9.9px -1.7px hsl(var(--shadow-color) / 0.34),
+    6.2px 13.9px 16px -2.1px hsl(var(--shadow-color) / 0.32),
+    9.6px 21.6px 24.8px -2.6px hsl(var(--shadow-color) / 0.3),
+    14.3px 32.3px 37.1px -3px hsl(var(--shadow-color) / 0.28);
+}
+
+.FieldCardHeader {
+  display: flex;
+  justify-content: space-between;
+  grid-column: 2 / 2;
+  align-items: center;
+  color: #555;
+  font-variation-settings: "wght" 400, "opsz" 8;
+}
+
+.FieldCardFooter {
+  display: flex;
+  justify-content: space-between;
+  grid-column: 2 / -1;
+  align-items: center;
+  color: #555;
+  padding: 0 1rem;
+}
+
+.FieldCardButtons {
+  margin: 0;
+}
+
+.FieldCardTextButton {
+  box-sizing: border-box;
+  border: none;
+  background-color: transparent;
+  color: hsl(var(--link-normal));
+  font-family: inherit;
+  padding: 0.25rem 0.5rem 0.25rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-variant-caps: all-small-caps;
+  font-weight: 300;
+  font-size: 0.85rem;
+  cursor: pointer;
+  font-variation-settings: "wght" 600, "opsz" 8;
+}
+.FieldCardTextButton:hover {
+  color: hsl(var(--link-hover));
+}
+.FieldCardButton:hover {
+  background-color: hsl(var(--link-hover));
+  color: white;
+}
+.FieldCardButton {
+  --border-color: 0 0% 94.1%;
+  box-sizing: border-box;
+  border: none;
+  background-color: hsl(var(--border-color));
+  font-family: inherit;
+  padding: 0.45rem 2rem 0.5rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: var(--shadow-elevation-high);
+  transition: box-shadow 250ms ease-in-out;
+  font-variant-caps: all-small-caps;
+  font-weight: 300;
+  font-size: 0.85rem;
+  cursor: pointer;
+  font-variation-settings: "wght" 600, "opsz" 8;
+}
+
+.FieldCardButton svg,
+.FieldCardTextButton svg {
+  margin-right: 1px;
+}
+.FieldCardButton.Primary {
+  --link-color: var(--link-normal);
+  background-color: hsl(var(--link-color));
+  color: white;
+  box-shadow: var(--shadow-elevation-high);
+}
+.FieldCardButton:hover {
+  background-color: hsl(var(--link-hover));
+  color: white;
+}
+
+.FieldCardButton:active {
+  box-shadow: var(--shadow-elevation-medium);
+}
+.FieldCardSidebar {
+  grid-column: 1 / 1;
+  grid-row: 1 / 4;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: #555;
+  flex-direction: column;
+  padding: 0.5rem 0;
+  background-color: rgb(248 248 248);
+}
+
+.FieldCardGrabHandle {
+  width: 0;
+  border: none;
+  border-left: 4px solid #e1e1e1;
+  height: 100%;
+  margin: 2.5rem 0;
+}
+.FieldCardGrabHandle:hover {
+  cursor: grab;
+}
+
+.FieldCardHeader.Handle {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+
+.FieldCardGrabHandle.Header {
+  width: 5rem;
+  border: none;
+  margin: 0 auto;
+  height: 0.5rem;
+  display: inline-flex;
+  padding: calc(0.25rem + 4px) 0.5rem 0.25rem;
+  border-radius: 8px;
+}
+.FieldCardGrabHandle.Header:hover {
+  background-color: #f0f0f0;
+}
+
+.FieldCardGrabHandle.Header::before {
+  content: "";
+  border-top: 4px solid #ccc;
+  height: 0.25rem;
+  width: 100%;
+  display: block;
+  margin: auto;
+}
+
+.CardNumber {
+  text-align: right;
+}
