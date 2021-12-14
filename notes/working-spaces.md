@@ -65,7 +65,7 @@ In existing note-taking apps, multiple views of the same note collections happen
 - **_Main + Different Representations._** Finally, you have apps where each view is just a different representation of the same structure. E.g. if you move a note descendent to a different parent note in the outliner view, that change is represented in the map or block views as well.
 - **_All of the above._** You could also risk confusion and simply use all of these approaches in a single app.
 
-Each approach has its uses, strengths and weaknesses. Supplementing a complex, power user main view with helpful visualisations can work well. Implementing different views as essentially their own documents can help you support a wide variety of use cases in a single design---provided you have the resources to implement a de facto app ecosystem wrapped up in a single environment. Finally, multiple representations of the same data works well if the views broadly share affordances while offering distinct visualisations and navigations of the same data. For example in the macOS Finder, how you interact with the files and folders is quite similiar across representations but it lets you represent a folder of images with big icons, a deep hierarchy of documents with a column view, and a large directory of downloads as a reverse-chronological list with details.
+Each approach has its uses, strengths and weaknesses. Supplementing a complex, power user main view with helpful visualisations can work well. Implementing different views as essentially their own documents can help you support a wide variety of use cases in a single design---provided you have the resources to implement a de facto app ecosystem wrapped up in a single environment. Finally, multiple representations of the same data works well if the views broadly share affordances while offering distinct visualisations and navigations of the same data. For example in the macOS Finder, how you interact with the files and folders is quite similar across representations but it lets you represent a folder of images with big icons, a deep hierarchy of documents with a column view, and a large directory of downloads as a reverse-chronological list with details.
 
 If you can't tell, I'm still a huge fan of macOS's Finder, even though it's evolved a bit from my ideal.
 
@@ -122,9 +122,9 @@ First, let's sort them in order of priority.
   <figcaption>With priority ordering. Cut off representations on the right.</figcaption>
 </figure>
 
-- The Pinboard Column strikes me as a sensible default. Unpositioned cards run along one of the right- or left-hand edges of the screen and the rest provides ample space for positioning. It also scales relatively well down to mobile, although you would need some sort of indicator, icon, or something to show that there is something off screen to scroll to. This view shouldn't wrap as it needs to serve the role of a default list view as well.
+- The Pinboard Column strikes me as a sensible default. Unpositioned cards run along one of the right- or left-hand edges of the screen and the rest provides ample space for positioning. It also scales relatively well down to mobile, although you would need some sort of indicator, icon, or something to show that there is something off-screen to scroll to. This view shouldn't wrap as it needs to serve the role of a default list view as well.
 - Pinboard Rows are also important as they are useful for displaying cards in a grid. (Question: rename to Pinboard Grid?) A grid view, especially if zoom works, can serve as a bird's eye view of a stack.
-- Finally, the Outliner view emphasises fast navigation into hierarchies, and complements the other two nicely.
+- Finally, the Outliner view emphasises fast navigation into hierarchies and complements the other two nicely.
 
 The rest are all candidates for future work but well beyond the scope of the initial version. Even the Outliner View is probably not going to be in scope for the initial prototype.
 
@@ -136,6 +136,6 @@ The rest are all candidates for future work but well beyond the scope of the ini
 - The views need to support exactly the kind of work that I've been documenting in this post in addition to the primary task of managing reading, documents, and notes related to those two.
 - The primary competition here aren't other apps but cheap index cards and a pencil.
 
-The next step is to sketch up these three main views and figure out a testing strategy. For the sketching I might have to break each view down into individual cards like I did here. (Hierarchy!)
+The next step is to sketch up these three main views and figure out a testing strategy. For the sketching, I might have to break each view down into individual cards as I did here. (Hierarchy!)
 
 {% include 'mailingform.njk' %}
