@@ -133,9 +133,9 @@ main > * {
 
 /* styles/css/img.css */
 img {
-  width: 100%;
-  max-width: 900px;
+  max-width: 100%;
   height: auto;
+  max-height: 100vh;
   margin: 1rem 0;
   box-shadow: var(--shadow-elevation-medium);
   border: 1px solid #f3f2e6;
@@ -370,6 +370,19 @@ a:hover {
 .logo {
   font-variant-caps: all-small-caps;
   font-variation-settings: "wght" 400, "opsz" 8;
+}
+
+/* styles/css/figure.css */
+figure {
+  grid-column: 1 / -1;
+}
+figcaption {
+  text-align: right;
+  font-style: italic;
+  margin: 0;
+}
+figure > img {
+  margin: 0;
 }
 
 /* styles/style.css */

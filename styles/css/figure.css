@@ -1,0 +1,12 @@
+figure {
+  grid-column: 1 / -1;
+}
+figcaption {
+  text-align: right;
+  font-style: italic;
+  margin: 0;
+}
+
+figure > img {
+  margin: 0;
+}

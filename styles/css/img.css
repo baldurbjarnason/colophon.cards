@@ -1,7 +1,7 @@
 img {
-  width: 100%;
-  max-width: 900px;
+  max-width: 100%;
   height: auto;
+  max-height: 100vh;
   margin: 1rem 0;
   box-shadow: var(--shadow-elevation-medium);
   border: 1px solid #f3f2e6;

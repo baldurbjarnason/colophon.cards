@@ -3,54 +3,17 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <!-- COMMON TAGS -->
     {% block title %}
-    <!-- Blocks may include default content. -->
     <title>{{ title }} – Colophon Cards</title>
     {% endblock %}
-    <!-- Search Engine -->
-    {# <meta
-      name="description"
-      content="{{if page }}{{ summary }}{{else}}{{site.Params.description}}{{end}}"
-    /> #}
-    {# <meta name="image" content="{{ param "image" }}"> #}
-    <!-- Schema.org for Google -->
     <meta itemprop="name" content="{{ title }}" />
-    {# <meta
-      itemprop="description"
-      content="{{if IsPage}}{{ .Summary }}{{else}}{{.Site.Params.description}}{{end}}"
-    /> #}
-    {# <meta itemprop="image" content="{{ $.Param "image" }}"> #}
-    <!-- Twitter -->
     <meta name="twitter:card" content="summary" />
     <meta name="twitter:title" content="{{ title }}" />
-    {# <meta
-      name="twitter:description"
-      content="{{if IsPage}}{{ summary }}{{else}}{{site.Params.description}}{{end}}"
-    /> #}
-    {# <!-- <meta name="twitter:site" content="@{{ $.Site.Params.twitter }}">
-	<meta name="twitter:creator" content="@{{ $.Site.Params.twitter }}">
-	<meta name="twitter:image:src" content="{{ $.Param "image" }}"> -->
-    <!-- Twitter - Article -->
-    <!-- Open Graph general (Facebook, Pinterest & Google+) --> #}
-    {# <meta name="og:title" content="{{ title }}" />
-    <meta
-      name="og:description"
-      content="{{if isPage}}{{ summary }}{{else}}{{site.Params.description}}{{end}}"
-    /> #}
-    {# {{ if Param "image" }}<meta name="og:image"
-    content="{{site.BaseURL}}{{param "image" }}">{{ end }} #}
     <meta name="og:url" content="https://www.colophon.cards{{ page.url }}" />
     <meta name="og:site_name" content="The Making of Colophon Cards" />
     <meta name="og:type" content="article" />
-    <!-- Open Graph - Article -->
     <meta name="article:author" content="https://www.baldurbjarnason.com/" />
     <meta name="author" content="Baldur Bjarnason" />
-    {# <meta name="article:tag" content="{{ range params.tags }}{{.}} {{end}}" /> #}
-    {# {{ $scss := resources.Get "styles/main.scss" | toCSS | resources.Minify |
-    resources.Fingerprint }} #}
-    {# <link rel="stylesheet" href="{{ $scss.RelPermalink }}" /> #}
-    {# {{ block "Styles" . }} {{ end }} #}
 
     <link href="/assets/style.css" rel="stylesheet" />
 
@@ -64,22 +27,6 @@
     <link href="/styles/source-serif-var/source-serif.css" rel="stylesheet" />
     <link href="https://www.colophon.cards/feed.xml" rel="alternate"
     type="application/rss+xml" title="All posts for The Making of Colophon Cards" />
-    {# <link 
-    href="{{ "index.xml" | absURL }}" rel="feed" type="application/rss+xml"
-    title="All posts for {{ .Site.Title }}" />
-    <link href="https://micro.blog/baldur" rel="me" />
-    {{ if $.Page.IsHome}}
-    <meta property="og:type" content="profile" />
-    <meta property="profile:first_name" content="Baldur" />
-    <meta property="profile:last_name" content="Bjarnason" />
-    {{ end }} {{ block "Scripts" . }}
-    <!-- 
-      <script type="module" src="/src/index.js"></script> -->
-    {{ end }} {{ block "Fonts" . }}
-    <!-- 
-      <script type="module" src="/src/index.js"></script> -->
-    {{ end }} #}
-    {# <link rel="manifest" href="/manifest.json" /> #}
   </head>
   <body class=""><div class="container {{tags}}">
       <nav class="main-navigation" aria-labelledby="site">
@@ -97,11 +44,6 @@
     {% endfor %}
         </ol>
       </nav>
-      {# <header class="header">
-        <div class="Description">
-          <div class="Title"><a href="/">{{ title }}</a></div>
-        </div>
-      </header> #}
     </ul>
       {% block main %}
       <main class="source-serif-ss03 source-serif-slashed-zero source-serif">
