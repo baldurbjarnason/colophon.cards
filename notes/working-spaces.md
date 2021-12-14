@@ -136,6 +136,6 @@ The rest are all candidates for future work but well beyond the scope of the ini
 - The views need to support exactly the kind of work that I've been documenting in this post in addition to the primary task of managing reading, documents, and notes related to those two.
 - The primary competition here aren't other apps but cheap index cards and a pencil.
 
-The next step is to sketch up these three main views and figure out a testing strategy.
+The next step is to sketch up these three main views and figure out a testing strategy. For the sketching I might have to break each view down into individual cards like I did here. (Hierarchy!)
 
 {% include 'mailingform.njk' %}
