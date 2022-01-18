@@ -1,0 +1,163 @@
+.Finder {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-gap: 1rem;
+  padding: 0;
+  margin: 0;
+  grid-column: 1 / 1;
+}
+.Finder label {
+  display: flex;
+  justify-content: space-between;
+  grid-column: 2 / 3;
+  align-items: center;
+  color: #555;
+  /* position: absolute; */
+  top: -1px;
+  left: -3rem;
+  padding: 0.25rem 1rem;
+  background-color: white;
+  font-size: 0.85rem;
+  font-variant-caps: small-caps;
+  /* font-variation-settings: "wght" 400, "opsz" 8; */
+  padding: 0.25rem 1rem;
+  height: 1.5rem;
+  margin-bottom: 0;
+  margin-right: auto;
+  z-index: 1;
+  border-top: 1px solid var(--color-form-border);
+  border-left: 1px solid var(--color-form-border);
+  border-right: 1px solid var(--color-form-border);
+  background-image: conic-gradient(
+    from -120deg at top left,
+    var(--color-background),
+    white
+  );
+}
+
+.Finder input {
+  display: block;
+  grid-column: 1 / -1;
+  border: 2px solid white;
+  border-radius: 3px;
+  padding: 0.5rem;
+  margin: 0 0;
+  font-family: var(--serif-small);
+  background-color: rgb(100% 100% 100% / 0.5);
+  box-shadow: 0 0 0 1px #ddd,
+    inset 0.3px 0.5px 0.7px hsl(var(--shadow-color) / 0.34),
+    inset 0.4px 0.8px 1px -1.2px hsl(var(--shadow-color) / 0.34),
+    inset 1px 2px 2.5px -2.5px hsl(var(--shadow-color) / 0.34);
+}
+
+.Finder input:focus {
+  background-color: white;
+  outline: none;
+  border: 2px solid black;
+}
+
+.Finder .ButtonWrap {
+  display: flex;
+  grid-column: 2 / 2;
+  align-items: center;
+  color: #555;
+  padding: 0;
+  /* position: absolute; */
+  bottom: -1px;
+  right: -3rem;
+  padding: 0;
+  text-transform: uppercase;
+  font-variant-caps: all-small-caps;
+  margin-left: auto;
+
+  z-index: 1;
+  /* background-color: var(--color-light-blue); */
+  /* height: 1.5rem; */
+  /* opacity: 0; */
+  /* transition: opacity 250ms ease-in-out; */
+}
+
+/* .Finder input:focus + .ButtonWrap {
+  opacity: 1;
+} */
+
+.Finder {
+  font-size: 1rem;
+  grid-column: 1 / 1;
+  font-family: var(--serif-small);
+  font-variation-settings: "opsz" 20, "wght" 400;
+  max-width: 80ch;
+  width: 100%;
+  margin: 0 0 0;
+  position: relative;
+  display: grid;
+  grid-template-columns: var(--card-margin) 1fr var(--card-margin);
+  padding: 0;
+  /* background-color: var(--color-form);
+  background-color: var(--color-light-blue); */
+  /* background-color: rgba(80% 91.79% 99.68% / 0.5); */
+  /* grid-gap: 0.5rem; */
+  transition: box-shadow 125ms ease-in-out;
+  /* border: 1px solid var(--color-form-border); */
+  /* box-shadow: var(--shadow-elevation-low); */
+  border-radius: 3px;
+}
+
+.FinderBody {
+  /* box-shadow: var(--shadow-elevation-low);*/
+  /* background-color: var(--color-light-blue); */
+  grid-column: 1 / -1;
+  width: 100%;
+  padding: 0;
+  display: grid;
+  grid-template-columns: 1rem 1fr 1rem;
+  border-radius: 3px;
+}
+
+.FinderBody p {
+  grid-column: 2 / 2;
+  margin: 0.5rem 0;
+}
+
+.Finder button {
+  display: inline-block;
+  border: none;
+  padding: 0.5rem 2rem;
+  margin: 0;
+  text-decoration: none;
+  background: var(--color-blue);
+  background-color: #f0f0f8;
+  /* color: #ffffff; */
+  color: var(--color-blue);
+  font-family: sans-serif;
+  font-size: 0.8rem;
+  line-height: 1;
+  cursor: pointer;
+  text-align: center;
+  transition: background 250ms ease-in-out, transform 150ms ease;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  box-shadow: inset 0 0 1px 1px white, var(--shadow-elevation-low);
+  /* border-radius: 3px; */
+  font-size: 1rem;
+  font-family: var(--serif-small);
+  font-variant-caps: all-small-caps;
+  font-variation-settings: "wght" 400, "opsz" 8;
+  grid-area: button;
+  border-bottom: 1px solid var(--color-form-border);
+  border-left: 1px solid var(--color-form-border);
+  border-right: 1px solid var(--color-form-border);
+  background-image: conic-gradient(
+    from -90deg at top left,
+    var(--color-light-blue),
+    white
+  );
+}
+
+.Finder button:active {
+  box-shadow: none;
+  color: white;
+  background-image: var(--gradient-active);
+  border-color: white;
+}

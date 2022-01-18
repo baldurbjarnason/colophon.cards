@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    {% block title %}
+    <title>{{ title }} – Colophon Cards</title>
+    {% endblock %}
+    <meta itemprop="name" content="{{ title }}" />
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:title" content="{{ title }}" />
+    <meta name="og:url" content="https://www.colophon.cards{{ page.url }}" />
+    <meta name="og:site_name" content="The Making of Colophon Cards" />
+    <meta name="og:type" content="article" />
+    <meta name="article:author" content="https://www.baldurbjarnason.com/" />
+    <meta name="author" content="Baldur Bjarnason" />
+
+    <link href="/styles/source-serif-var/source-serif.css" rel="stylesheet" />
+{% for style in stylesheets %}
+    <link href="/assets/{{style}}" rel="stylesheet" />
+{% endfor %}
+{% for script in scripts %}
+    <script src="/assets/{{script}}" defer></script>
+{% endfor %}
+    <link href="https://www.colophon.cards/feed.xml" rel="alternate"
+    type="application/rss+xml" title="All posts for The Making of Colophon Cards" />
+  </head>
+  <body class="source-serif-ss03 source-serif-slashed-zero source-serif">
+      {% block main %}
+          {{ content | safe }}
+      {% endblock %}
+      {%block footer %}{% endblock  %}
+  </body>
+</html>

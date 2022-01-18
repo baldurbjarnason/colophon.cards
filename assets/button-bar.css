@@ -1,0 +1,39 @@
+.ButtonBar {
+  display: flex;
+  justify-content: space-around;
+  grid-column: 1 / 1;
+  align-items: center;
+  color: #555;
+  padding: 0;
+  padding: 0.25rem 1rem;
+  text-transform: uppercase;
+  font-variant-caps: all-small-caps;
+  background-color: var(--color-light-blue);
+  height: 1.5rem;
+}
+
+.ButtonBar button {
+  display: inline-block;
+  border: none;
+  padding: 0.5rem 1rem;
+  margin: 0;
+  text-decoration: none;
+  background: var(--color-blue);
+  color: #ffffff;
+  font-family: sans-serif;
+  font-size: 1rem;
+  line-height: 1;
+  cursor: pointer;
+  text-align: center;
+  transition: background 250ms ease-in-out, transform 150ms ease;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  box-shadow: var(--shadow-elevation-low);
+  border-radius: 3px;
+  font-size: 1rem;
+  font-family: var(--serif-small);
+  font-variant-caps: all-small-caps;
+  font-variation-settings: "wght" 400, "opsz" 8;
+  grid-area: button;
+}
