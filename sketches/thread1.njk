@@ -5,6 +5,7 @@ tags: sketch
 layout: sketch.njk
 scripts:
   - "aria-switch-control.js"
+  - "draggabilly.pkgd.min.js"
 stylesheets:
   - "sketch-thread.css"
   - "sketch-thread-card.css"
@@ -20,6 +21,14 @@ stylesheets:
   for ( let i = 0; i < els.length; i++ ) {
     const dis = new ARIAswitch( els[i] );
   }
+  const draggableElems = document.querySelectorAll('.ModeCard');
+  const draggies = []
+  for ( var i=0; i < draggableElems.length; i++ ) {
+  var draggableElem = draggableElems[i];
+  var draggie = new Draggabilly( draggableElem, {
+  });
+  draggies.push( draggie );
+}
 </script>
 <nav class="TopNav">
   <ol>
