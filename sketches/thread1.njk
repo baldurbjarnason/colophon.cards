@@ -34,7 +34,7 @@ stylesheets:
   <ol>
     <li><a href="#">Decks</a> &rarr;</li>
     <li><a href="#">Deck Name</a> &rarr;</li>
-    <li><a href="#">Current Pile</a></li>
+    <li><a href="#">#PileID</a></li>
   </ol>
   <a href="#"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 14.66V20a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h5.34"></path><polygon points="18 2 22 6 12 16 8 16 8 12 18 2"></polygon></svg> Capture</a>
   <a href="#"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><g fill="none" fill-rule="evenodd"><path d="M18 14v5a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8c0-1.1.9-2 2-2h5M15 3h6v6M10 14L20.2 3.8"/></g></svg> Share</a>
@@ -58,7 +58,7 @@ stylesheets:
     
   <h3 class="ModeCardName">Deck Name</h3>
   <div class="ModeCardBody">This is the Deck's description.</div>
-  <div class="ModeCardFooter">
+  <div class="ModeCardFooter" style="display: block;">
     
       <div class="ButtonWrap"><button>+ Upload</button></div>
     <div class="CardDate CardNumber"> <span href="#">32 items</span></div>
@@ -71,7 +71,7 @@ stylesheets:
     <div class="ModeCardGrabHandle">&nbsp;</div>
   <div class="ModeCardHeader">
     
-    <div class="CardTag"><a href="#">#YoullUseThisToFindThisCard</a></div>
+    <div class="CardDate">1 December 2021 &middot; 13:25</div>
   </div>
   <div class="ModeCardSwitch">
   <label class="check-switch">
@@ -101,17 +101,22 @@ stylesheets:
     <div class="ModeCardGrabHandle">&nbsp;</div>
   <div class="ModeCardHeader">
     {% if stack.current === 2 %}
-    
     <div class="CardTag"><a href="#">#YoullUseThisToFindThisCard</a></div>
+    {% elif stack.current === 0 %}
+    <div class="CardDate">1 December 2021 &middot; 13:25</div>
     {% else %}
     <div class="CardDate"><a href="#">1 December 2021 &middot; 13:25</a></div>
     {% endif %}
   </div>
   <div class="ModeCardSwitch">
+    {% if stack.current === 0 %}
   <label class="check-switch">
     <div class="ModeCardToggleLabel">Edit</div>
     <input type="checkbox" data-switch>
-  </label></div>
+  </label>
+    {% else %}
+    <a href="#" class="CardView">View</a>
+    {% endif %}</div>
     {# <div class="ModeCardSidebar">
   <hr class="ModeCardGrabHandle"/>
     </div> #}
@@ -119,7 +124,7 @@ stylesheets:
   <div class="ModeCardBody">This is a card body. Or card text. What does this look like? What does this feel like? How does this work? Does it need rich text? Will <a href="#">plaintext</a> do? Is markdown a useful compromise?</div>
     <div class="CardTags">  <a href="#">#ThisIsAnId</a> <a href="#">#AnotherOne</a></div>
   <div class="ModeCardFooter">
-    <div class="CardDate CardNumber"> <a href="#">{{stack.current / 2}} items</a></div>
+    <div class="CardDate CardNumber"> <a href="#">{{stack.current / 2}} more&hellip;</a></div>
   </div>
   <div class="ModeCardBackChildren">
     {% for i in range(0, stack.current / 2)%}
@@ -141,10 +146,7 @@ width: 28rem;">
     
   </div>
   <div class="ModeCardSwitch">
-  <label class="check-switch">
-    <div class="ModeCardToggleLabel">Edit</div>
-    <input type="checkbox" data-switch="" role="switch">
-  <span aria-hidden="true"></span></label></div>
+    <a href="#" class="CardView">View</a></div>
     
   <h3 class="ModeCardName"><a href="#">You'll use this to find this card</a></h3>
   <div class="ModeCardBody">This is a card body. Or card text. What does this look like? What does this feel like? How does this work? Does it need rich text? Will <a href="#">plaintext</a> do? Is markdown a useful compromise?</div>
@@ -174,16 +176,13 @@ width: 28rem;">
     
   </div>
   <div class="ModeCardSwitch">
-  <label class="check-switch">
-    <div class="ModeCardToggleLabel">Edit</div>
-    <input type="checkbox" data-switch="" role="switch">
-  <span aria-hidden="true"></span></label></div>
+    <a href="#" class="CardView">View</a></div>
     
   <h3 class="ModeCardName"><a href="#">You'll use this to find this card</a></h3>
   <div class="ModeCardBody">This is a card body. Or card text. What does this look like? What does this feel like? How does this work? Does it need rich text? Will <a href="#">plaintext</a> do? Is markdown a useful compromise?</div>
     <div class="CardTags">  <a href="#">#ThisIsAnId</a> <a href="#">#AnotherOne</a></div>
   <div class="ModeCardFooter">
-    <div class="CardDate CardNumber"> <a href="#">6 items</a></div>
+    <div class="CardDate CardNumber"> <a href="#">6 more&hellip;</a></div>
   </div>
   <div class="ModeCardBackChildren">
     
@@ -202,8 +201,7 @@ left: 35rem;
 width: 28rem;">
     <div class="ModeCardGrabHandle">&nbsp;</div>
   <div class="ModeCardHeader">
-    
-    <div class="CardTag"><a href="#">#YoullUseThisToFindThisCard</a></div>
+    <div class="CardDate">1 December 2021 &middot; 13:25</div>
   </div>
   <div class="ModeCardSwitch">
   <label class="check-switch">
