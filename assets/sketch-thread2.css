@@ -1,0 +1,380 @@
+:root {
+  --fonts: -apple-system, BlinkMacSystemFont, "San Francisco", "Roboto",
+    "Segoe UI", Cantarell, Ubuntu, "Helvetica Neue", "Lucida Grande", sans-serif;
+  --serif: "Source Serif", "Sitka Text", ui-serif, Constantia, "Lucida Bright",
+    Lucidabright, "Lucida Serif", Lucida, "DejaVu Serif", "Bitstream Vera Serif",
+    "Liberation Serif", Georgia, serif;
+  --font-size: "Source Serif", 1.25rem;
+  --serif-small: "Source Serif", "Sitka Small", ui-serif, Constantia,
+    "Lucida Bright", Lucidabright, "Lucida Serif", Lucida, "DejaVu Serif",
+    "Bitstream Vera Serif", "Liberation Serif", Georgia, serif;
+  --serif-subheading: "Source Serif", "Sitka Subheading", ui-serif, Constantia,
+    "Lucida Bright", Lucidabright, "Lucida Serif", Lucida, "DejaVu Serif",
+    "Bitstream Vera Serif", "Liberation Serif", Georgia, serif;
+  --serif-heading: "Source Serif", "Sitka Heading", ui-serif, Constantia,
+    "Lucida Bright", Lucidabright, "Lucida Serif", Lucida, "DejaVu Serif",
+    "Bitstream Vera Serif", "Liberation Serif", Georgia, serif;
+  --serif-banner: "Source Serif", "Sitka Banner", ui-serif, Constantia,
+    "Lucida Bright", Lucidabright, "Lucida Serif", Lucida, "DejaVu Serif",
+    "Bitstream Vera Serif", "Liberation Serif", Georgia, serif;
+}
+:root {
+  --color-background: hsl(0, 33.3%, 99.4%);
+  --color-background: rgb(100% 97.45% 92.36%);
+  --color-background-card: hsl(0, 33.3%, 100%);
+  --color-border-card: rgb(92.58% 90.79% 87.25%);
+  --color-light-yellow: rgb(100% 88.46% 60.28%);
+  --color-light-pink: rgb(100% 86.38% 90.12%);
+  --color-light-blue: rgb(80% 91.79% 99.68%);
+  --color-light-green: rgb(46.69% 100% 69.65%);
+  --color-light-cyan: rgb(32.53% 99.27% 100%);
+  --base-color: rgb(33 33 33);
+  --color-blue: rgb(0% 42.32% 57.64%);
+  --color-yellow: rgb(98.49% 70.41% 0%);
+  --color-form: rgb(96.61% 91.53% 80.86%);
+  --color-form-border: rgb(91.83% 88.38% 81.32%);
+  --color-cold-grey: #f0f0f8;
+  --color-active-blue: rgb(0% 67.1% 90.36%);
+  --background-info: conic-gradient(
+    from -90deg at top left,
+    var(--color-light-blue),
+    rgb(80% 91.79% 99.68% / 0.25)
+  );
+  --gradient-active: conic-gradient(
+    from -90deg at top left,
+    var(--color-blue),
+    var(--color-active-blue)
+  );
+  --card-margin: 3rem;
+  --shadow-color: 38deg 30% 60%;
+  --shadow-elevation-lower: 0.4px 0.8px 1px -1.2px hsl(var(--shadow-color) /
+          0.34),
+    1px 2px 2.5px -2.5px hsl(var(--shadow-color) / 0.34);
+  --shadow-elevation-low: 0.3px 0.5px 0.7px hsl(var(--shadow-color) / 0.34),
+    0.4px 0.8px 1px -1.2px hsl(var(--shadow-color) / 0.34),
+    1px 2px 2.5px -2.5px hsl(var(--shadow-color) / 0.34);
+  --shadow-elevation-low: 0.3px 0.5px 0.7px hsl(var(--shadow-color) / 0.36),
+    0.8px 1.6px 2px -0.8px hsl(var(--shadow-color) / 0.36),
+    2.1px 4.1px 5.2px -1.7px hsl(var(--shadow-color) / 0.36);
+  --shadow-elevation-medium: 0.3px 0.5px 0.7px hsl(var(--shadow-color) / 0.36),
+    0.8px 1.6px 2px -0.8px hsl(var(--shadow-color) / 0.36),
+    2.1px 4.1px 5.2px -1.7px hsl(var(--shadow-color) / 0.36),
+    5px 10px 12.6px -2.5px hsl(var(--shadow-color) / 0.36);
+  --shadow-elevation-high: 0.3px 0.5px 0.7px hsl(var(--shadow-color) / 0.34),
+    1.5px 2.9px 3.7px -0.4px hsl(var(--shadow-color) / 0.34),
+    2.7px 5.4px 6.8px -0.7px hsl(var(--shadow-color) / 0.34),
+    4.5px 8.9px 11.2px -1.1px hsl(var(--shadow-color) / 0.34),
+    7.1px 14.3px 18px -1.4px hsl(var(--shadow-color) / 0.34),
+    11.2px 22.3px 28.1px -1.8px hsl(var(--shadow-color) / 0.34),
+    17px 33.9px 42.7px -2.1px hsl(var(--shadow-color) / 0.34),
+    25px 50px 62.9px -2.5px hsl(var(--shadow-color) / 0.34);
+}
+
+@supports (color: lch(98% 8 85)) {
+  :root {
+    --color-background: lch(98% 3 85);
+    --color-light-yellow: lch(91% 50 85);
+    --color-light-pink: lch(91% 17 0);
+    --color-light-blue: lch(91% 15 242);
+    --color-light-green: lch(91% 60 154);
+    --color-light-cyan: lch(91% 49 198);
+    --color-blue: lch(42% 40 242);
+    --color-yellow: lch(84% 100 85);
+    --base-color: lch(9% 14 100);
+    --color-active-blue: lch(65% 50 242);
+  }
+}
+
+*,
+* + * {
+  margin: 0;
+  padding: 0;
+
+  box-sizing: border-box;
+}
+
+html {
+  font-family: var(--serif);
+  font-size: var(--font-size);
+  background-color: #fcfcfa;
+  margin: 0;
+  padding: 0;
+  color: var(--base-color);
+  background-color: var(--color-background);
+}
+
+h1 {
+  font-family: var(--serif-banner);
+  font-size: 3rem;
+  font-variation-settings: "opsz" 60, "wght" 400;
+}
+
+h2,
+h3 {
+  font-family: var(--serif-heading);
+  font-size: 1.75rem;
+  font-weight: 600;
+  /* font-style: italic; */
+  font-variation-settings: "opsz" 32, "wght" 600;
+  margin-bottom: 0.5rem;
+  line-height: 2rem;
+}
+
+.Thread h2 {
+  grid-column: 1 / 1;
+  font-family: var(--serif-heading);
+  font-size: 5rem;
+  font-weight: 600;
+  font-style: italic;
+  font-variation-settings: "opsz" 32, "wght" 600;
+  margin: 1rem 0;
+  padding-left: 3rem;
+  line-height: 5rem;
+  color: #403933;
+}
+
+.Explainer {
+  grid-column: 1 / 1;
+  font-style: italic;
+  padding-left: 3rem;
+  font-size: 1rem;
+}
+
+a:link {
+  color: var(--color-blue);
+}
+
+.ModeCardBackCard {
+  display: block;
+  content: "";
+  height: 100%;
+  width: 100%;
+  background-color: var(--color-background-card);
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  border: 1px solid var(--color-border-card);
+  box-shadow: var(--shadow-elevation-lower);
+}
+
+.ModeCardBackCard:nth-of-type(2n) {
+  transform: rotate(4deg);
+  z-index: -7;
+}
+.ModeCardBackCard:nth-of-type(2n + 1) {
+  transform: rotate(-4deg);
+  z-index: -7;
+}
+
+.ModeCardBackCard:nth-of-type(1) {
+  transform: rotate(1deg);
+  z-index: -1;
+}
+.ModeCardBackCard:nth-of-type(2) {
+  transform: rotate(-1deg);
+  z-index: -1;
+}
+.ModeCardBackCard:nth-of-type(3) {
+  transform: rotate(1.5deg);
+  z-index: -2;
+}
+.ModeCardBackCard:nth-of-type(4) {
+  transform: rotate(-1.5deg);
+  z-index: -2;
+}
+.ModeCardBackCard:nth-of-type(5) {
+  transform: rotate(2deg);
+  z-index: -3;
+}
+.ModeCardBackCard:nth-of-type(6) {
+  transform: rotate(-2deg);
+  z-index: -3;
+}
+.ModeCardBackCard:nth-of-type(7) {
+  transform: rotate(2.5deg);
+  z-index: -4;
+}
+.ModeCardBackCard:nth-of-type(8) {
+  transform: rotate(-2.5deg);
+  z-index: -4;
+}
+.ModeCardBackCard:nth-of-type(9) {
+  transform: rotate(3deg);
+  z-index: -5;
+}
+.ModeCardBackCard:nth-of-type(10) {
+  transform: rotate(-3deg);
+  z-index: -5;
+}
+.ModeCardBackCard:nth-of-type(11) {
+  transform: rotate(3.5deg);
+  z-index: -6;
+}
+.ModeCardBackCard:nth-of-type(12) {
+  transform: rotate(-3.5deg);
+  z-index: -6;
+}
+.ModeCardBackChildren {
+  --translate: translate(0px, 2px);
+  transform: rotate(-1deg) translate(0px, 3px);
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  z-index: -1;
+}
+
+.ModeCardSwitch {
+  box-sizing: content-box;
+  box-shadow: var(--shadow-elevation-lower);
+}
+
+/* styling specific to the knob of the switch */
+.ModeCardSwitch .check-switch span[aria-hidden]:after {
+  background: #000;
+  border-radius: 100%;
+  height: 0.5em;
+  right: 1.5em;
+  transition: right 0.1825s ease-in-out;
+  width: 0.5em;
+}
+
+/* styling specific to the knob "container" */
+.ModeCardSwitch .check-switch span[aria-hidden]:before {
+  background: #eee;
+  border-radius: 1.75em;
+  height: auto;
+  right: 0.25em;
+  transition: background 0.2s ease-in-out;
+  width: 1rem;
+}
+.ModeCardSwitch .check-switch input:checked + span[aria-hidden]:after {
+  right: 0.25em;
+}
+
+.Pinboard {
+  position: absolute;
+  top: 0rem;
+  left: 31rem;
+  bottom: 0;
+  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='32' height='32'><circle cx='1' cy='1' r='1' fill='%2333333333' /></svg>");
+  background-color: rgb(255 255 255 / 0.5);
+  background-image: radial-gradient(
+    circle at 2px 2px,
+    #33333366 1px,
+    rgb(0 0 0 / 0) 0
+  );
+  z-index: -5;
+  background-size: 2rem 2rem, 100% 100%;
+  box-shadow: 0 0 1rem 1rem rgb(255 255 255 / 0.5);
+  /* In the actual implementation this would be a CSS variable that defaults to this but would be updated based on card positions */
+  min-width: calc(100vw - 28rem);
+}
+
+.TopNav {
+  display: grid;
+  /* background-color: rgb(255 255 255 / 0.5); */
+  grid-template-columns: 1fr auto auto auto;
+  background-image: conic-gradient(
+    from 33deg at top center,
+    var(--color-background),
+    rgb(255 255 255 / 0.5)
+  );
+  padding: 0 1.5rem;
+  box-shadow: inset 0 0 1rem 1rem rgb(255 255 255 / 0.5),
+    0 0 1rem 1rem rgb(255 255 255 / 0.5);
+  border-bottom: 1px solid var(--color-background);
+  position: sticky;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 5;
+  backdrop-filter: blur(10px);
+  width: 100vw;
+}
+
+.TopNav ol {
+  display: flex;
+  padding: 0;
+  list-style: none;
+}
+
+/* .TopNav ol li {
+  margin-right: 0.5rem;
+} */
+
+/* .TopNav ol li a {
+  margin-right: 0.5rem;
+  text-transform: uppercase;
+  font-variant-caps: all-small-caps;
+  text-decoration: none;
+} */
+
+.TopNav a {
+  display: inline-flex;
+  border: none;
+  align-items: center;
+  padding: 0.5rem 0.25rem;
+  margin: 0 0.25rem;
+  text-decoration: none;
+  /* background: var(--color-blue); */
+  /* background-color: #f0f0f8; */
+  /* color: #ffffff; */
+  color: var(--color-blue);
+  font-family: sans-serif;
+  font-size: 0.8rem;
+  line-height: 1;
+  cursor: pointer;
+  text-align: center;
+  transition: background 250ms ease-in-out, transform 150ms ease;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  /* box-shadow: inset 0 0 1px 1px white, var(--shadow-elevation-low); */
+  /* border-radius: 3px; */
+  font-size: 0.9rem;
+  font-family: var(--serif-small);
+  font-variant-caps: all-small-caps;
+  font-variation-settings: "wght" 400, "opsz" 8;
+  /* 
+  border-left: 1px solid var(--color-form-border);
+  border-right: 1px solid var(--color-form-border); */
+  /* background-image: conic-gradient(
+    from -90deg at top left,
+    var(--color-light-blue),
+    white
+  ); */
+}
+
+.TopNav a:active {
+  box-shadow: none;
+  color: white;
+  background-image: var(--gradient-active);
+  border-color: white;
+}
+
+.TopNav a:hover {
+  color: white;
+  background-image: var(--gradient-active);
+  border-color: white;
+}
+.TopNav a svg {
+  margin-right: 0.25rem;
+}
+
+.TopNav a + a {
+  margin-left: 0.75rem;
+}
+
+[data-stack-size="0"] .ModeCardFooter {
+  display: none;
+}
+
+[data-stack-size="0"] .ModeCardHeader {
+  /* background: none; */
+  /* border: none; */
+}
+[data-stack-size="0"] .ModeCardHeader .CardDate {
+  /* background: none; */
+  /* color: black; */
+}

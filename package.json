@@ -6,7 +6,8 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "build-styles": "esbuild styles/style.css --bundle --outfile=assets/style.css --loader:.svg=dataurl",
-    "build": "eleventy"
+    "build": "eleventy",
+    "serve": "eleventy --serve"
   },
   "repository": {
     "type": "git",

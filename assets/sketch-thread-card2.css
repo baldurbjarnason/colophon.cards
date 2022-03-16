@@ -1,0 +1,489 @@
+.Thread {
+  display: grid;
+  grid-gap: 2rem;
+  grid-template-columns: 1fr 3fr;
+  grid-template-columns: 28rem 1fr;
+  padding-left: 1rem;
+  position: relative;
+  z-index: 0;
+  margin-top: 2rem;
+}
+
+/* The Single Mode version */
+.ModeCard {
+  font-size: 1rem;
+  grid-column: 1 / 1;
+  font-family: var(--serif-small);
+  font-variation-settings: "opsz" 20, "wght" 400;
+  --border-color: 0 0% 100%;
+  max-width: 80ch;
+  width: 100%;
+  margin: 0;
+  position: relative;
+  display: grid;
+  grid-template-columns: var(--card-margin) 1fr var(--card-margin);
+  padding: var(--card-margin) 0;
+  background-color: var(--color-background-card);
+  /* grid-gap: 0.5rem; */
+  transition: box-shadow 125ms ease-in-out;
+  border: 1px solid var(--color-border-card);
+  box-shadow: var(--shadow-elevation-low);
+  border-radius: 3px;
+}
+
+.ModeCard[data-stack-size]:not([data-stack-size="0"]) {
+  box-shadow: inset 0 0 0px 1px var(--color-light-blue),
+    var(--shadow-elevation-low);
+}
+
+.ModeCard.HeadingCard {
+  box-shadow: none;
+  border: none;
+  background-color: transparent;
+  /* border: 1px solid var(--color-form-border); */
+  padding-top: 0;
+  padding-bottom: 4rem;
+}
+
+.ModeCard.ImageCard {
+  /* border: none; */
+  /* background-color: rgb(191 191 191); */
+  padding-top: 0;
+  padding-bottom: 0;
+}
+.ModeCard.ImageCard .ModeCardFooter,
+.ModeCard.ImageCard .ModeCardHeader,
+.ModeCard.ImageCard .ModeCardGrabHandle,
+.ModeCard.ImageCard .ModeCardSwitch {
+  z-index: 1;
+  /* background-color: rgb(191 191 191 / 0.75);
+  backdrop-filter: blur(10px);
+  background-image: none;
+  border: none;
+  color: black; */
+}
+
+.ModeCard.ImageCard .ModeCardSwitch,
+.ModeCard.ImageCard .ModeCardHeader {
+  /* background-color: rgb(191 191 191 / 0.75);
+  background-image: none; */
+  /* top: 0; */
+  /* line-height: 1;
+  /* padding-top: 0;
+  padding-bottom: 0; */ */
+}
+
+.ModeCard.ImageCard .ModeCardGrabHandle {
+  grid-row: 1 / -1;
+  height: auto;
+  margin: 3rem 0 4rem;
+  margin-left: 0.5rem;
+  border-left: 0.25rem double #f0f0f0;
+  border-color: rgb(255 255 255 / 0.25);
+}
+
+.ModeCard.ImageCard figure {
+  max-width: 100%;
+  grid-column: 1 / -1;
+  grid-row: 1 / -1;
+  position: relative;
+  padding: 2rem 0 3rem;
+}
+
+.ModeCard.ImageCard figcaption {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 30%;
+  padding: 0.5rem;
+  font-style: italic;
+  font-size: 0.8rem;
+}
+
+.ModeCard.ImageCard img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  /* width: 28rem;
+  height: 28rem;
+  object-fit: cover; */
+}
+
+.ModeCard button {
+  display: inline-block;
+  border: none;
+  padding: 0.5rem 1rem;
+  margin: 0;
+  text-decoration: none;
+  background: var(--color-blue);
+  background-color: var(--color-cold-grey);
+  background-image: conic-gradient(
+    from -90deg at top left,
+    var(--color-light-blue),
+    white
+  );
+  box-shadow: inset 0 0 1px 1px white, var(--shadow-elevation-low);
+  /* color: #ffffff; */
+  color: var(--color-blue);
+  font-family: sans-serif;
+  font-size: 0.8rem;
+  line-height: 1;
+  cursor: pointer;
+  text-align: center;
+  transition: background 250ms ease-in-out, transform 150ms ease;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  /* box-shadow: var(--shadow-elevation-low); */
+  /* border-radius: 3px; */
+  font-size: 1rem;
+  font-family: var(--serif-small);
+  font-variant-caps: all-small-caps;
+  font-variation-settings: "wght" 400, "opsz" 8;
+  grid-area: button;
+  border: 1px solid var(--color-form-border);
+}
+
+.ModeCard button:active {
+  box-shadow: none;
+  color: white;
+  background-image: var(--gradient-active);
+  border-color: white;
+}
+.ModeCard.HeadingCard .ModeCardFooter {
+  background-color: transparent;
+  border: none;
+  justify-content: space-between;
+  left: -4rem;
+  background-image: none;
+}
+
+.ModeCard:focus-within {
+  /* box-shadow: var(--shadow-elevation-high); */
+  outline: 3px solid #eee;
+}
+/* 
+.Card[data-editing] {
+  box-shadow: var(--shadow-elevation-high);
+  --border-color: var(--link-normal);
+} */
+
+.ModeCardSummary {
+  grid-column: 2 / 2;
+}
+
+.ModeCardLabel {
+  cursor: pointer;
+  /* font-variation-settings: "wght" 600, "opsz" 8; */
+  font-variant-caps: all-small-caps;
+  display: block;
+}
+
+.ModeCardName {
+  grid-column: 2 / 2;
+}
+
+.ModeCardName a {
+  text-decoration: none;
+}
+/* 
+.ModeCard input {
+  text-align: left;
+  hyphens: manual;
+  padding: 0;
+  border: 1px solid #f0f0f0;
+  white-space: pre-wrap;
+  font-family: inherit;
+  font-size: 100%;
+  margin: 0;
+  font-variation-settings: inherit;
+  font-feature-settings: inherit;
+  background-color: white;
+  width: 100%;
+  box-sizing: border-box;
+} */
+
+.ModeCardBody {
+  text-align: justify;
+  hyphens: manual;
+  padding: 0;
+  font-family: inherit;
+  font-size: 100%;
+  grid-column: 2 / 2;
+  hyphens: auto;
+}
+.ModeCardEditable {
+  text-align: left;
+  hyphens: manual;
+  padding: 0;
+  border: 1px solid #f0f0f0;
+  white-space: pre-wrap;
+  font-family: inherit;
+  font-size: 100%;
+  grid-column: 2 / 2;
+  font-variation-settings: inherit;
+  font-feature-settings: inherit;
+  background-color: white;
+  width: 100%;
+  box-sizing: border-box;
+  height: 7rem;
+}
+
+.ModeCardDate {
+  padding: 0.75rem 0rem 0.75rem;
+  font-size: 0.85rem;
+  color: #555;
+  /* font-variant-caps: all-small-caps; */
+}
+
+.CardTags {
+  grid-column: 2 / 2;
+  /* position: absolute; */
+  bottom: 0;
+  left: 0;
+  right: 30%;
+  font-size: 0.8rem;
+  font-style: italic;
+  padding: 0.25rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.CardTags a {
+  text-decoration: none;
+}
+
+.ModeCardEdit {
+  position: absolute;
+  bottom: -0.5rem;
+  right: -0.5rem;
+  display: flex;
+}
+[data-editing] .CardEdit {
+  --shadow-color: 0 0% 31%;
+  --shadow-elevation-high: 0.1px 0.3px 0.3px hsl(var(--shadow-color) / 0.4),
+    0.7px 1.6px 1.8px -0.4px hsl(var(--shadow-color) / 0.39),
+    1.3px 3px 3.4px -0.9px hsl(var(--shadow-color) / 0.37),
+    2.3px 5.2px 6px -1.3px hsl(var(--shadow-color) / 0.35),
+    3.8px 8.6px 9.9px -1.7px hsl(var(--shadow-color) / 0.34),
+    6.2px 13.9px 16px -2.1px hsl(var(--shadow-color) / 0.32),
+    9.6px 21.6px 24.8px -2.6px hsl(var(--shadow-color) / 0.3),
+    14.3px 32.3px 37.1px -3px hsl(var(--shadow-color) / 0.28);
+}
+
+.ModeCardHeader {
+  display: flex;
+  justify-content: space-between;
+  grid-column: 2 / 2;
+  align-items: center;
+  color: #555;
+  position: absolute;
+  top: -1px;
+  left: -2rem;
+  padding: 0.25rem 1rem;
+  /* background-color: var(--color-light-yellow); */
+  background-color: white;
+  background-image: var(--background-info);
+  font-size: 0.85rem;
+  /* font-variant-caps: small-caps; */
+  /* font-variation-settings: "wght" 400, "opsz" 8; */
+  padding: 0.5rem 1.25rem;
+  /* height: 1.5rem; */
+  border-bottom: 1px solid var(--color-border-card);
+  border-left: 1px solid var(--color-border-card);
+  border-right: 1px solid var(--color-border-card);
+  box-shadow: inset 0 0 1px 1px white, var(--shadow-elevation-lower);
+}
+.ModeCardSwitch {
+  position: absolute;
+  top: -0.125rem;
+  right: 1rem;
+  padding: 0.25rem 1rem;
+  /* background-color: #f0f0f0; */
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  width: 4rem;
+  height: 1.5rem;
+  line-height: 1;
+  padding-top: 0;
+  padding-bottom: 0;
+}
+
+.ModeCard:not([data-stack-size="0"]) .ModeCardSwitch {
+  padding: 0;
+  height: 1.5rem;
+  font-size: 1rem;
+  border-bottom: 1px solid var(--color-border-card);
+  border-left: 1px solid var(--color-border-card);
+  background-image: var(--background-info);
+  box-shadow: inset 0 0 1px 1px white, var(--shadow-elevation-lower);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: auto;
+  width: auto;
+}
+
+.ModeCard:not([data-stack-size="0"]) .ModeCardSwitch a {
+  text-decoration: none;
+  padding: 0.5rem 2rem;
+  display: inline-block;
+  font-variant-caps: all-small-caps;
+}
+
+.ModeCardFooter {
+  display: flex;
+  justify-content: space-between;
+  grid-column: 2 / 2;
+  align-items: center;
+  color: #555;
+  padding: 0;
+  position: absolute;
+  bottom: -1px;
+  right: -2rem;
+  padding: 0.25rem 2rem;
+  text-transform: uppercase;
+  font-variant-caps: all-small-caps;
+  background-color: var(--color-light-blue);
+  background-color: var(--color-cold-grey);
+  background-image: var(--background-info);
+  border-top: 1px solid var(--color-border-card);
+  border-left: 1px solid var(--color-border-card);
+  border-right: 1px solid var(--color-border-card);
+  box-shadow: inset 0 0 1px 1px white, var(--shadow-elevation-lower);
+}
+.ModeCardFooter a,
+.ModeCardHeader a {
+  text-decoration: none;
+}
+
+.ModeCardButtons {
+  margin: 0;
+}
+
+.ModeCardTextButton {
+  box-sizing: border-box;
+  border: none;
+  background-color: transparent;
+  color: hsl(var(--link-normal));
+  font-family: inherit;
+  padding: 0.25rem 0.5rem 0.25rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-variant-caps: all-small-caps;
+  font-weight: 300;
+  font-size: 0.85rem;
+  cursor: pointer;
+  /* font-variation-settings: "wght" 600, "opsz" 8; */
+}
+.ModeCardTextButton:hover {
+  color: hsl(var(--link-hover));
+}
+.ModeCardButton:hover {
+  background-color: hsl(var(--link-hover));
+  color: white;
+}
+.ModeCardButton {
+  --border-color: 0 0% 94.1%;
+  box-sizing: border-box;
+  border: none;
+  background-color: hsl(var(--border-color));
+  font-family: inherit;
+  padding: 0.45rem 2rem 0.5rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: var(--shadow-elevation-high);
+  transition: box-shadow 250ms ease-in-out;
+  font-variant-caps: all-small-caps;
+  font-weight: 300;
+  font-size: 0.85rem;
+  cursor: pointer;
+  /* font-variation-settings: "wght" 600, "opsz" 8; */
+}
+
+.ModeCardButton svg,
+.ModeCardTextButton svg {
+  margin-right: 1px;
+}
+.ModeCardButton.Primary {
+  --link-color: var(--link-normal);
+  background-color: hsl(var(--link-color));
+  color: white;
+  box-shadow: var(--shadow-elevation-high);
+}
+.ModeCardButton:hover {
+  background-color: hsl(var(--link-hover));
+  color: white;
+}
+
+.ModeCardButton:active {
+  box-shadow: var(--shadow-elevation-medium);
+}
+.ModeCardSidebar {
+  grid-column: 1 / 1;
+  grid-row: 1 / 5;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: #555;
+  flex-direction: column;
+  padding: 0.5rem 0;
+  background-color: rgb(248 248 248);
+}
+
+.ModeCardGrabHandle {
+  width: 0;
+  border: none;
+  border-left: 0.25rem double #f0f0f0;
+  height: 100%;
+  margin: 0;
+  margin-left: 0.25rem;
+  grid-column: 1 / 1;
+  grid-row: 1 / 3;
+}
+.ModeCardGrabHandle:hover {
+  cursor: grab;
+}
+
+.CardNumber {
+  text-align: right;
+}
+
+.ModeCardLinks {
+  grid-column: 2 / 2;
+  padding: 0.25rem 0.25rem;
+}
+
+.ModeCardAttachments {
+  grid-column: 2 / 2;
+  padding: 0;
+}
+
+.ModeCardLink {
+  box-shadow: var(--shadow-elevation-low);
+  padding: 0.5rem;
+  padding-left: 4rem;
+  background-color: #f9f9f9;
+  border: 1px solid #f0f0f0;
+  border-radius: 8px;
+  margin: 0.5rem 0;
+}
+.ModeCardLink.Internal {
+  background-color: white;
+  border-radius: 0px;
+}
+
+.ModeCardLink.Attachment {
+  background-color: white;
+  border-radius: 0px;
+  margin: 0.5rem -0.5rem;
+  margin-right: -1.5rem;
+}
+
+
+.ModeCardSwitch, .ModeCard:not([data-stack-size="0"]) .ModeCardSwitch {
+  display: none;
+}
