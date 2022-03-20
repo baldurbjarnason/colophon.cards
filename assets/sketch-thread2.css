@@ -4,7 +4,7 @@
   --serif: "Source Serif", "Sitka Text", ui-serif, Constantia, "Lucida Bright",
     Lucidabright, "Lucida Serif", Lucida, "DejaVu Serif", "Bitstream Vera Serif",
     "Liberation Serif", Georgia, serif;
-  --font-size: "Source Serif", 1.25rem;
+  --font-size: 1rem;
   --serif-small: "Source Serif", "Sitka Small", ui-serif, Constantia,
     "Lucida Bright", Lucidabright, "Lucida Serif", Lucida, "DejaVu Serif",
     "Bitstream Vera Serif", "Liberation Serif", Georgia, serif;
@@ -17,6 +17,12 @@
   --serif-banner: "Source Serif", "Sitka Banner", ui-serif, Constantia,
     "Lucida Bright", Lucidabright, "Lucida Serif", Lucida, "DejaVu Serif",
     "Bitstream Vera Serif", "Liberation Serif", Georgia, serif;
+  --serif: system-ui;
+  --serif-small: system-ui;
+  --serif-subheading: system-ui;
+  --serif-heading: system-ui;
+  --serif-banner: system-ui;
+  --card-width: 32rem;
 }
 :root {
   --color-background: hsl(0, 33.3%, 99.4%);
@@ -96,11 +102,11 @@
 html {
   font-family: var(--serif);
   font-size: var(--font-size);
-  background-color: #fcfcfa;
+  background-color: #fcfcfc;
   margin: 0;
   padding: 0;
   color: var(--base-color);
-  background-color: var(--color-background);
+  /* background-color: var(--color-background); */
 }
 
 h1 {
@@ -150,6 +156,7 @@ a:link {
   height: 100%;
   width: 100%;
   background-color: var(--color-background-card);
+  background-color: white;
   position: absolute;
   top: 0;
   left: 0;
@@ -259,27 +266,27 @@ a:link {
   bottom: 0;
   background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='32' height='32'><circle cx='1' cy='1' r='1' fill='%2333333333' /></svg>");
   background-color: rgb(255 255 255 / 0.5);
-  background-image: radial-gradient(
+  /* background-image: radial-gradient(
     circle at 2px 2px,
     #33333366 1px,
     rgb(0 0 0 / 0) 0
-  );
+  ); */
   z-index: -5;
   background-size: 2rem 2rem, 100% 100%;
   box-shadow: 0 0 1rem 1rem rgb(255 255 255 / 0.5);
   /* In the actual implementation this would be a CSS variable that defaults to this but would be updated based on card positions */
-  min-width: calc(100vw - 28rem);
+  min-width: calc(100vw - var(--card-width));
 }
 
 .TopNav {
   display: grid;
-  /* background-color: rgb(255 255 255 / 0.5); */
+  background-color: rgb(255 255 255 / 0.5);
   grid-template-columns: 1fr auto auto auto;
-  background-image: conic-gradient(
+  /* background-image: conic-gradient(
     from 33deg at top center,
     var(--color-background),
     rgb(255 255 255 / 0.5)
-  );
+  ); */
   padding: 0 1.5rem;
   box-shadow: inset 0 0 1rem 1rem rgb(255 255 255 / 0.5),
     0 0 1rem 1rem rgb(255 255 255 / 0.5);

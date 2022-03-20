@@ -45,9 +45,9 @@ stylesheets:
   {# <h3 class="ModeCardName">Weblog </h3> #}
     
       <label for="finder">Find Or Create</label>
-      <input type="text" id="finder" placeholder="FindByID">
-      
-      <div class="ButtonWrap"><button>Create</button></div>
+      <input type="text" id="finder" placeholder="Filter by label">
+      {# Find filter #}
+      <div class="ButtonWrap"><button>Create with label</button></div>
   </div>
   </div>
 {# <div class="ModeCard HeadingCard" data-editing="" data-stack-size="0" style="touch-action: none;">
@@ -68,10 +68,10 @@ stylesheets:
   </div>
   </div> #}
 <div class="ModeCard ImageCard" data-editing="" data-stack-size="0" style="touch-action: none;">
-    <div class="ModeCardGrabHandle">&nbsp;</div>
+    {# <div class="ModeCardGrabHandle">&nbsp;</div> #}
   <div class="ModeCardHeader">
     
-    <div class="CardDate">Raven photo, Hveragerði. Lightpole photoshop job. <em>1 December 2021 · 13:25</em></div>
+    <div class="CardDate">Raven photo, Hveragerði. Lightpole photoshop job. <a href="#">#ThisIsAnId</a> <a href="#">#AnotherOne</a></div>
   </div>
   <div class="ModeCardSwitch">
   <label class="check-switch">
@@ -80,7 +80,7 @@ stylesheets:
   <span aria-hidden="true"></span><span aria-hidden="true"></span></label></div>
     <figure>
       <img src="/images/image-card1.jpg" alt="A raven flies against some darkened clouds">
-      <figcaption>A grungy gothic look at the local ravens<br>  <a href="#">#ThisIsAnId</a> <a href="#">#AnotherOne</a></figcaption>
+      <figcaption>A grungy gothic look at the local ravens<br> <em>1 December 2021 · 13:25</em></figcaption>
     </figure>
   <div class="ModeCardFooter">
   
@@ -98,7 +98,7 @@ stylesheets:
     <div class="ModeCardGrabHandle">&nbsp;</div>
   <div class="ModeCardHeader">
     
-    <div class="CardDate">1 December 2021 · 13:25</div>
+    <div class="CardDate">Short fragment on glancing</div>
     
   </div>
   <div class="ModeCardSwitch">
@@ -109,8 +109,10 @@ stylesheets:
   <span aria-hidden="true"></span></label>
     </div>
     
-  <h3 class="ModeCardName"><a href="#">Card Heading</a></h3>
-  <div class="ModeCardBody">This is a card body. Or card text. What does this look like? What does this feel like? How does this work? Does it need rich text? Will <a href="#">plaintext</a> do? Is markdown a useful compromise?</div>
+  {# <h3 class="ModeCardName"><a href="#">Card Heading</a></h3> #}
+  <div class="ModeCardBody">Stepan Arkadyevitch made no reply, he merely glanced at Matvey in the looking-glass. In the glance, in which their eyes met in the looking-glass, it was clear that they understood one another. Stepan Arkadyevitch’s eyes asked: “Why do you tell me that? don’t you know?”
+
+</div>
     <div class="CardTags">  <a href="#">#ThisIsAnId</a> <a href="#">#AnotherOne</a></div>
   <div class="ModeCardFooter">
     <div class="CardDate CardNumber"> <a href="#">0 more…</a></div>
@@ -122,7 +124,7 @@ stylesheets:
     <div class="ModeCardGrabHandle">&nbsp;</div>
   <div class="ModeCardHeader">
     
-    <div class="CardTag"><a href="#">#PileId8</a></div>
+    <div class="CardTag"><a href="#">Not sure if this fits #randomTag</a></div>
     
   </div>
   <div class="ModeCardSwitch">
@@ -130,8 +132,10 @@ stylesheets:
     <a href="#" class="CardView">Pile</a>
     </div>
     
-  <h3 class="ModeCardName"><a href="#">Card Heading</a></h3>
-  <div class="ModeCardBody">This is a card body. Or card text. What does this look like? What does this feel like? How does this work? Does it need rich text? Will <a href="#">plaintext</a> do? Is markdown a useful compromise?</div>
+  {# <h3 class="ModeCardName"><a href="#">Card Heading</a></h3> #}
+  <div class="ModeCardBody">“Darya Alexandrovna told me to inform you that she is going away. Let him do—that is you—as he likes,” he said, laughing only with his eyes, and putting his hands in his pockets, he watched his master with his head on one side. Stepan Arkadyevitch was silent a minute. Then a good-humored and rather pitiful smile showed itself on his handsome face.
+
+</div>
     <div class="CardTags">  <a href="#">#ThisIsAnId</a> <a href="#">#AnotherOne</a></div>
   <div class="ModeCardFooter">
     <div class="CardDate CardNumber"> <a href="#">1 more…</a></div>
@@ -144,7 +148,7 @@ stylesheets:
     <div class="ModeCardGrabHandle">&nbsp;</div>
   <div class="ModeCardHeader">
     
-    <div class="CardTag"><a href="#">#PileId3</a></div>
+    <div class="CardTag"><a href="#">Need to think this one through</a></div>
     
   </div>
   <div class="ModeCardSwitch">
@@ -152,8 +156,10 @@ stylesheets:
     <a href="#" class="CardView">Pile</a>
     </div>
     
-  <h3 class="ModeCardName"><a href="#">Card Heading</a></h3>
-  <div class="ModeCardBody">This is a card body. Or card text. What does this look like? What does this feel like? How does this work? Does it need rich text? Will <a href="#">plaintext</a> do? Is markdown a useful compromise?</div>
+  {# <h3 class="ModeCardName"><a href="#">Card Heading</a></h3> #}
+  <div class="ModeCardBody">When he was dressed, Stepan Arkadyevitch sprinkled some scent on himself, pulled down his shirt-cuffs, distributed into his pockets his cigarettes, pocketbook, matches, and watch with its double chain and seals, and shaking out his handkerchief, feeling himself clean, fragrant, healthy, and physically at ease, in spite of his unhappiness, he walked with a slight swing on each leg into the dining-room, where coffee was already waiting for him, and beside the coffee, letters and papers from the office.
+
+</div>
     <div class="CardTags">  <a href="#">#ThisIsAnId</a> <a href="#">#AnotherOne</a></div>
   <div class="ModeCardFooter">
     <div class="CardDate CardNumber"> <a href="#">1 more…</a></div>
@@ -166,7 +172,7 @@ stylesheets:
     <div class="ModeCardGrabHandle">&nbsp;</div>
   <div class="ModeCardHeader">
     
-    <div class="CardDate">1 December 2021 · 13:25</div>
+    <div class="CardDate">This could be one of the letter examples, one that matches the scene with the letter opener in the train.</div>
     
   </div>
   <div class="ModeCardSwitch">
@@ -177,8 +183,10 @@ stylesheets:
   <span aria-hidden="true"></span></label>
     </div>
     
-  <h3 class="ModeCardName"><a href="#">Card Heading</a></h3>
-  <div class="ModeCardBody">This is a card body. Or card text. What does this look like? What does this feel like? How does this work? Does it need rich text? Will <a href="#">plaintext</a> do? Is markdown a useful compromise?</div>
+  {# <h3 class="ModeCardName"><a href="#">Card Heading</a></h3> #}
+  <div class="ModeCardBody">When he had finished his letters, Stepan Arkadyevitch moved the office-papers close to him, rapidly looked through two pieces of business, made a few notes with a big pencil, and pushing away the papers, turned to his coffee. As he sipped his coffee, he opened a still damp morning paper, and began reading it.
+
+</div>
     <div class="CardTags">  <a href="#">#ThisIsAnId</a> <a href="#">#AnotherOne</a></div>
   <div class="ModeCardFooter">
     <div class="CardDate CardNumber"> <a href="#">0 more…</a></div>
@@ -190,7 +198,7 @@ stylesheets:
     <div class="ModeCardGrabHandle">&nbsp;</div>
   <div class="ModeCardHeader">
     
-    <div class="CardDate"><a href="#">1 December 2021 · 13:25</a></div>
+    <div class="CardDate"><a href="#">This is a little bit more playful than I remembered</a></div>
     
   </div>
   <div class="ModeCardSwitch">
@@ -198,8 +206,10 @@ stylesheets:
     <a href="#" class="CardView">Pile</a>
     </div>
     
-  <h3 class="ModeCardName"><a href="#">Card Heading</a></h3>
-  <div class="ModeCardBody">This is a card body. Or card text. What does this look like? What does this feel like? How does this work? Does it need rich text? Will <a href="#">plaintext</a> do? Is markdown a useful compromise?</div>
+    {# <h3 class="ModeCardName"><a href="#">Card Heading</a></h3> #}
+  <div class="ModeCardBody">The little girl, her father’s favorite, ran up boldly, embraced him, and hung laughingly on his neck, enjoying as she always did the smell of scent that came from his whiskers. At last the little girl kissed his face, which was flushed from his stooping posture and beaming with tenderness, loosed her hands, and was about to run away again; but her father held her back.
+
+</div>
     <div class="CardTags">  <a href="#">#ThisIsAnId</a> <a href="#">#AnotherOne</a></div>
   <div class="ModeCardFooter">
     <div class="CardDate CardNumber"> <a href="#">10 more…</a></div>
@@ -221,7 +231,7 @@ stylesheets:
     <div class="ModeCardGrabHandle">&nbsp;</div>
   <div class="ModeCardHeader">
     
-    <div class="CardDate"><a href="#">1 December 2021 · 13:25</a></div>
+    <div class="CardDate"><a href="#">I wonder what this was like in the original</a></div>
     
   </div>
   <div class="ModeCardSwitch">
@@ -229,8 +239,10 @@ stylesheets:
     <a href="#" class="CardView">Pile</a>
     </div>
     
-  <h3 class="ModeCardName"><a href="#">Card Heading</a></h3>
-  <div class="ModeCardBody">This is a card body. Or card text. What does this look like? What does this feel like? How does this work? Does it need rich text? Will <a href="#">plaintext</a> do? Is markdown a useful compromise?</div>
+    {# <h3 class="ModeCardName"><a href="#">Card Heading</a></h3> #}
+  <div class="ModeCardBody">Seeing her husband, she dropped her hands into the drawer of the bureau as though looking for something, and only looked round at him when he had come quite up to her. But her face, to which she tried to give a severe and resolute expression, betrayed bewilderment and suffering.
+
+</div>
     <div class="CardTags">  <a href="#">#ThisIsAnId</a> <a href="#">#AnotherOne</a></div>
   <div class="ModeCardFooter">
     <div class="CardDate CardNumber"> <a href="#">6 more…</a></div>
@@ -256,7 +268,7 @@ stylesheets:
     <a href="#" class="CardView">Pile</a>
     </div>
     
-  <h3 class="ModeCardName"><a href="#">Card Heading</a></h3>
+    {# <h3 class="ModeCardName"><a href="#">Card Heading</a></h3> #}
   <div class="ModeCardBody">This is a card body. Or card text. What does this look like? What does this feel like? How does this work? Does it need rich text? Will <a href="#">plaintext</a> do? Is markdown a useful compromise?</div>
     <div class="CardTags">  <a href="#">#ThisIsAnId</a> <a href="#">#AnotherOne</a></div>
   <div class="ModeCardFooter">
@@ -278,7 +290,7 @@ stylesheets:
     <a href="#" class="CardView">Pile</a>
     </div>
     
-  <h3 class="ModeCardName"><a href="#">Card Heading</a></h3>
+    {# <h3 class="ModeCardName"><a href="#">Card Heading</a></h3> #}
   <div class="ModeCardBody">This is a card body. Or card text. What does this look like? What does this feel like? How does this work? Does it need rich text? Will <a href="#">plaintext</a> do? Is markdown a useful compromise?</div>
     <div class="CardTags">  <a href="#">#ThisIsAnId</a> <a href="#">#AnotherOne</a></div>
   <div class="ModeCardFooter">
@@ -300,7 +312,7 @@ stylesheets:
     <a href="#" class="CardView">Pile</a>
     </div>
     
-  <h3 class="ModeCardName"><a href="#">Card Heading</a></h3>
+    {# <h3 class="ModeCardName"><a href="#">Card Heading</a></h3> #}
   <div class="ModeCardBody">This is a card body. Or card text. What does this look like? What does this feel like? How does this work? Does it need rich text? Will <a href="#">plaintext</a> do? Is markdown a useful compromise?</div>
     <div class="CardTags">  <a href="#">#ThisIsAnId</a> <a href="#">#AnotherOne</a></div>
   <div class="ModeCardFooter">
@@ -424,7 +436,7 @@ stylesheets:
   <span aria-hidden="true"></span></label>
     </div>
     
-  <h3 class="ModeCardName"><a href="#">Card Heading</a></h3>
+    {# <h3 class="ModeCardName"><a href="#">Card Heading</a></h3> #}
   <div class="ModeCardBody">This is a card body. Or card text. What does this look like? What does this feel like? How does this work? Does it need rich text? Will <a href="#">plaintext</a> do? Is markdown a useful compromise?</div>
     <div class="CardTags">  <a href="#">#ThisIsAnId</a> <a href="#">#AnotherOne</a></div>
   <div class="ModeCardFooter">
@@ -448,7 +460,7 @@ stylesheets:
   <span aria-hidden="true"></span></label>
     </div>
     
-  <h3 class="ModeCardName"><a href="#">Card Heading</a></h3>
+    {# <h3 class="ModeCardName"><a href="#">Card Heading</a></h3> #}
   <div class="ModeCardBody">This is a card body. Or card text. What does this look like? What does this feel like? How does this work? Does it need rich text? Will <a href="#">plaintext</a> do? Is markdown a useful compromise?</div>
     <div class="CardTags">  <a href="#">#ThisIsAnId</a> <a href="#">#AnotherOne</a></div>
   <div class="ModeCardFooter">
@@ -469,7 +481,7 @@ stylesheets:
     <a href="#" class="CardView">Pile</a>
     </div>
     
-  <h3 class="ModeCardName"><a href="#">Card Heading</a></h3>
+    {# <h3 class="ModeCardName"><a href="#">Card Heading</a></h3> #}
   <div class="ModeCardBody">This is a card body. Or card text. What does this look like? What does this feel like? How does this work? Does it need rich text? Will <a href="#">plaintext</a> do? Is markdown a useful compromise?</div>
     <div class="CardTags">  <a href="#">#ThisIsAnId</a> <a href="#">#AnotherOne</a></div>
   <div class="ModeCardFooter">
@@ -491,7 +503,7 @@ stylesheets:
     <a href="#" class="CardView">Pile</a>
     </div>
     
-  <h3 class="ModeCardName"><a href="#">Card Heading</a></h3>
+    {# <h3 class="ModeCardName"><a href="#">Card Heading</a></h3> #}
   <div class="ModeCardBody">This is a card body. Or card text. What does this look like? What does this feel like? How does this work? Does it need rich text? Will <a href="#">plaintext</a> do? Is markdown a useful compromise?</div>
     <div class="CardTags">  <a href="#">#ThisIsAnId</a> <a href="#">#AnotherOne</a></div>
   <div class="ModeCardFooter">
@@ -518,7 +530,7 @@ stylesheets:
   <span aria-hidden="true"></span></label>
     </div>
     
-  <h3 class="ModeCardName"><a href="#">Card Heading</a></h3>
+    {# <h3 class="ModeCardName"><a href="#">Card Heading</a></h3> #}
   <div class="ModeCardBody">This is a card body. Or card text. What does this look like? What does this feel like? How does this work? Does it need rich text? Will <a href="#">plaintext</a> do? Is markdown a useful compromise?</div>
     <div class="CardTags">  <a href="#">#ThisIsAnId</a> <a href="#">#AnotherOne</a></div>
   <div class="ModeCardFooter">
@@ -539,7 +551,7 @@ stylesheets:
     <a href="#" class="CardView">Pile</a>
     </div>
     
-  <h3 class="ModeCardName"><a href="#">Card Heading</a></h3>
+    {# <h3 class="ModeCardName"><a href="#">Card Heading</a></h3> #}
   <div class="ModeCardBody">This is a card body. Or card text. What does this look like? What does this feel like? How does this work? Does it need rich text? Will <a href="#">plaintext</a> do? Is markdown a useful compromise?</div>
     <div class="CardTags">  <a href="#">#ThisIsAnId</a> <a href="#">#AnotherOne</a></div>
   <div class="ModeCardFooter">
@@ -561,7 +573,7 @@ stylesheets:
     <a href="#" class="CardView">Pile</a>
     </div>
     
-  <h3 class="ModeCardName"><a href="#">Card Heading</a></h3>
+    {# <h3 class="ModeCardName"><a href="#">Card Heading</a></h3> #}
   <div class="ModeCardBody">This is a card body. Or card text. What does this look like? What does this feel like? How does this work? Does it need rich text? Will <a href="#">plaintext</a> do? Is markdown a useful compromise?</div>
     <div class="CardTags">  <a href="#">#ThisIsAnId</a> <a href="#">#AnotherOne</a></div>
   <div class="ModeCardFooter">
@@ -586,7 +598,7 @@ stylesheets:
   <span aria-hidden="true"></span></label>
     </div>
     
-  <h3 class="ModeCardName"><a href="#">Card Heading</a></h3>
+    {# <h3 class="ModeCardName"><a href="#">Card Heading</a></h3> #}
   <div class="ModeCardBody">This is a card body. Or card text. What does this look like? What does this feel like? How does this work? Does it need rich text? Will <a href="#">plaintext</a> do? Is markdown a useful compromise?</div>
     <div class="CardTags">  <a href="#">#ThisIsAnId</a> <a href="#">#AnotherOne</a></div>
   <div class="ModeCardFooter">
@@ -607,7 +619,7 @@ stylesheets:
     <a href="#" class="CardView">Pile</a>
     </div>
     
-  <h3 class="ModeCardName"><a href="#">Card Heading</a></h3>
+    {# <h3 class="ModeCardName"><a href="#">Card Heading</a></h3> #}
   <div class="ModeCardBody">This is a card body. Or card text. What does this look like? What does this feel like? How does this work? Does it need rich text? Will <a href="#">plaintext</a> do? Is markdown a useful compromise?</div>
     <div class="CardTags">  <a href="#">#ThisIsAnId</a> <a href="#">#AnotherOne</a></div>
   <div class="ModeCardFooter">
@@ -638,7 +650,7 @@ stylesheets:
     <a href="#" class="CardView">Pile</a>
     </div>
     
-  <h3 class="ModeCardName"><a href="#">Card Heading</a></h3>
+    {# <h3 class="ModeCardName"><a href="#">Card Heading</a></h3> #}
   <div class="ModeCardBody">This is a card body. Or card text. What does this look like? What does this feel like? How does this work? Does it need rich text? Will <a href="#">plaintext</a> do? Is markdown a useful compromise?</div>
     <div class="CardTags">  <a href="#">#ThisIsAnId</a> <a href="#">#AnotherOne</a></div>
   <div class="ModeCardFooter">
@@ -665,7 +677,7 @@ stylesheets:
     <a href="#" class="CardView">Pile</a>
     </div>
     
-  <h3 class="ModeCardName"><a href="#">Card Heading</a></h3>
+    {# <h3 class="ModeCardName"><a href="#">Card Heading</a></h3> #}
   <div class="ModeCardBody">This is a card body. Or card text. What does this look like? What does this feel like? How does this work? Does it need rich text? Will <a href="#">plaintext</a> do? Is markdown a useful compromise?</div>
     <div class="CardTags">  <a href="#">#ThisIsAnId</a> <a href="#">#AnotherOne</a></div>
   <div class="ModeCardFooter">
@@ -687,7 +699,7 @@ stylesheets:
     <a href="#" class="CardView">Pile</a>
     </div>
     
-  <h3 class="ModeCardName"><a href="#">Card Heading</a></h3>
+    {# <h3 class="ModeCardName"><a href="#">Card Heading</a></h3> #}
   <div class="ModeCardBody">This is a card body. Or card text. What does this look like? What does this feel like? How does this work? Does it need rich text? Will <a href="#">plaintext</a> do? Is markdown a useful compromise?</div>
     <div class="CardTags">  <a href="#">#ThisIsAnId</a> <a href="#">#AnotherOne</a></div>
   <div class="ModeCardFooter">
@@ -709,7 +721,7 @@ stylesheets:
     <a href="#" class="CardView">Pile</a>
     </div>
     
-  <h3 class="ModeCardName"><a href="#">Card Heading</a></h3>
+    {# <h3 class="ModeCardName"><a href="#">Card Heading</a></h3> #}
   <div class="ModeCardBody">This is a card body. Or card text. What does this look like? What does this feel like? How does this work? Does it need rich text? Will <a href="#">plaintext</a> do? Is markdown a useful compromise?</div>
     <div class="CardTags">  <a href="#">#ThisIsAnId</a> <a href="#">#AnotherOne</a></div>
   <div class="ModeCardFooter">
@@ -833,7 +845,7 @@ stylesheets:
   <span aria-hidden="true"></span></label>
     </div>
     
-  <h3 class="ModeCardName"><a href="#">Card Heading</a></h3>
+    {# <h3 class="ModeCardName"><a href="#">Card Heading</a></h3> #}
   <div class="ModeCardBody">This is a card body. Or card text. What does this look like? What does this feel like? How does this work? Does it need rich text? Will <a href="#">plaintext</a> do? Is markdown a useful compromise?</div>
     <div class="CardTags">  <a href="#">#ThisIsAnId</a> <a href="#">#AnotherOne</a></div>
   <div class="ModeCardFooter">
@@ -857,7 +869,7 @@ stylesheets:
   <span aria-hidden="true"></span></label>
     </div>
     
-  <h3 class="ModeCardName"><a href="#">Card Heading</a></h3>
+    {# <h3 class="ModeCardName"><a href="#">Card Heading</a></h3> #}
   <div class="ModeCardBody">This is a card body. Or card text. What does this look like? What does this feel like? How does this work? Does it need rich text? Will <a href="#">plaintext</a> do? Is markdown a useful compromise?</div>
     <div class="CardTags">  <a href="#">#ThisIsAnId</a> <a href="#">#AnotherOne</a></div>
   <div class="ModeCardFooter">
@@ -878,7 +890,7 @@ stylesheets:
     <a href="#" class="CardView">Pile</a>
     </div>
     
-  <h3 class="ModeCardName"><a href="#">Card Heading</a></h3>
+    {# <h3 class="ModeCardName"><a href="#">Card Heading</a></h3> #}
   <div class="ModeCardBody">This is a card body. Or card text. What does this look like? What does this feel like? How does this work? Does it need rich text? Will <a href="#">plaintext</a> do? Is markdown a useful compromise?</div>
     <div class="CardTags">  <a href="#">#ThisIsAnId</a> <a href="#">#AnotherOne</a></div>
   <div class="ModeCardFooter">
@@ -900,7 +912,7 @@ stylesheets:
     <a href="#" class="CardView">Pile</a>
     </div>
     
-  <h3 class="ModeCardName"><a href="#">Card Heading</a></h3>
+    {# <h3 class="ModeCardName"><a href="#">Card Heading</a></h3> #}
   <div class="ModeCardBody">This is a card body. Or card text. What does this look like? What does this feel like? How does this work? Does it need rich text? Will <a href="#">plaintext</a> do? Is markdown a useful compromise?</div>
     <div class="CardTags">  <a href="#">#ThisIsAnId</a> <a href="#">#AnotherOne</a></div>
   <div class="ModeCardFooter">
@@ -927,7 +939,7 @@ stylesheets:
   <span aria-hidden="true"></span></label>
     </div>
     
-  <h3 class="ModeCardName"><a href="#">Card Heading</a></h3>
+    {# <h3 class="ModeCardName"><a href="#">Card Heading</a></h3> #}
   <div class="ModeCardBody">This is a card body. Or card text. What does this look like? What does this feel like? How does this work? Does it need rich text? Will <a href="#">plaintext</a> do? Is markdown a useful compromise?</div>
     <div class="CardTags">  <a href="#">#ThisIsAnId</a> <a href="#">#AnotherOne</a></div>
   <div class="ModeCardFooter">
@@ -948,7 +960,7 @@ stylesheets:
     <a href="#" class="CardView">Pile</a>
     </div>
     
-  <h3 class="ModeCardName"><a href="#">Card Heading</a></h3>
+    {# <h3 class="ModeCardName"><a href="#">Card Heading</a></h3> #}
   <div class="ModeCardBody">This is a card body. Or card text. What does this look like? What does this feel like? How does this work? Does it need rich text? Will <a href="#">plaintext</a> do? Is markdown a useful compromise?</div>
     <div class="CardTags">  <a href="#">#ThisIsAnId</a> <a href="#">#AnotherOne</a></div>
   <div class="ModeCardFooter">
@@ -970,7 +982,7 @@ stylesheets:
     <a href="#" class="CardView">Pile</a>
     </div>
     
-  <h3 class="ModeCardName"><a href="#">Card Heading</a></h3>
+    {# <h3 class="ModeCardName"><a href="#">Card Heading</a></h3> #}
   <div class="ModeCardBody">This is a card body. Or card text. What does this look like? What does this feel like? How does this work? Does it need rich text? Will <a href="#">plaintext</a> do? Is markdown a useful compromise?</div>
     <div class="CardTags">  <a href="#">#ThisIsAnId</a> <a href="#">#AnotherOne</a></div>
   <div class="ModeCardFooter">
@@ -995,7 +1007,7 @@ stylesheets:
   <span aria-hidden="true"></span></label>
     </div>
     
-  <h3 class="ModeCardName"><a href="#">Card Heading</a></h3>
+    {# <h3 class="ModeCardName"><a href="#">Card Heading</a></h3> #}
   <div class="ModeCardBody">This is a card body. Or card text. What does this look like? What does this feel like? How does this work? Does it need rich text? Will <a href="#">plaintext</a> do? Is markdown a useful compromise?</div>
     <div class="CardTags">  <a href="#">#ThisIsAnId</a> <a href="#">#AnotherOne</a></div>
   <div class="ModeCardFooter">
@@ -1016,7 +1028,7 @@ stylesheets:
     <a href="#" class="CardView">Pile</a>
     </div>
     
-  <h3 class="ModeCardName"><a href="#">Card Heading</a></h3>
+    {# <h3 class="ModeCardName"><a href="#">Card Heading</a></h3> #}
   <div class="ModeCardBody">This is a card body. Or card text. What does this look like? What does this feel like? How does this work? Does it need rich text? Will <a href="#">plaintext</a> do? Is markdown a useful compromise?</div>
     <div class="CardTags">  <a href="#">#ThisIsAnId</a> <a href="#">#AnotherOne</a></div>
   <div class="ModeCardFooter">
@@ -1047,7 +1059,7 @@ stylesheets:
     <a href="#" class="CardView">Pile</a>
     </div>
     
-  <h3 class="ModeCardName"><a href="#">Card Heading</a></h3>
+    {# <h3 class="ModeCardName"><a href="#">Card Heading</a></h3> #}
   <div class="ModeCardBody">This is a card body. Or card text. What does this look like? What does this feel like? How does this work? Does it need rich text? Will <a href="#">plaintext</a> do? Is markdown a useful compromise?</div>
     <div class="CardTags">  <a href="#">#ThisIsAnId</a> <a href="#">#AnotherOne</a></div>
   <div class="ModeCardFooter">
@@ -1074,7 +1086,7 @@ stylesheets:
     <a href="#" class="CardView">Pile</a>
     </div>
     
-  <h3 class="ModeCardName"><a href="#">Card Heading</a></h3>
+    {# <h3 class="ModeCardName"><a href="#">Card Heading</a></h3> #}
   <div class="ModeCardBody">This is a card body. Or card text. What does this look like? What does this feel like? How does this work? Does it need rich text? Will <a href="#">plaintext</a> do? Is markdown a useful compromise?</div>
     <div class="CardTags">  <a href="#">#ThisIsAnId</a> <a href="#">#AnotherOne</a></div>
   <div class="ModeCardFooter">
@@ -1096,7 +1108,7 @@ stylesheets:
     <a href="#" class="CardView">Pile</a>
     </div>
     
-  <h3 class="ModeCardName"><a href="#">Card Heading</a></h3>
+    {# <h3 class="ModeCardName"><a href="#">Card Heading</a></h3> #}
   <div class="ModeCardBody">This is a card body. Or card text. What does this look like? What does this feel like? How does this work? Does it need rich text? Will <a href="#">plaintext</a> do? Is markdown a useful compromise?</div>
     <div class="CardTags">  <a href="#">#ThisIsAnId</a> <a href="#">#AnotherOne</a></div>
   <div class="ModeCardFooter">
@@ -1118,7 +1130,7 @@ stylesheets:
     <a href="#" class="CardView">Pile</a>
     </div>
     
-  <h3 class="ModeCardName"><a href="#">Card Heading</a></h3>
+    {# <h3 class="ModeCardName"><a href="#">Card Heading</a></h3> #}
   <div class="ModeCardBody">This is a card body. Or card text. What does this look like? What does this feel like? How does this work? Does it need rich text? Will <a href="#">plaintext</a> do? Is markdown a useful compromise?</div>
     <div class="CardTags">  <a href="#">#ThisIsAnId</a> <a href="#">#AnotherOne</a></div>
   <div class="ModeCardFooter">
@@ -1242,7 +1254,7 @@ stylesheets:
   <span aria-hidden="true"></span></label>
     </div>
     
-  <h3 class="ModeCardName"><a href="#">Card Heading</a></h3>
+    {# <h3 class="ModeCardName"><a href="#">Card Heading</a></h3> #}
   <div class="ModeCardBody">This is a card body. Or card text. What does this look like? What does this feel like? How does this work? Does it need rich text? Will <a href="#">plaintext</a> do? Is markdown a useful compromise?</div>
     <div class="CardTags">  <a href="#">#ThisIsAnId</a> <a href="#">#AnotherOne</a></div>
   <div class="ModeCardFooter">
@@ -1266,7 +1278,7 @@ stylesheets:
   <span aria-hidden="true"></span></label>
     </div>
     
-  <h3 class="ModeCardName"><a href="#">Card Heading</a></h3>
+    {# <h3 class="ModeCardName"><a href="#">Card Heading</a></h3> #}
   <div class="ModeCardBody">This is a card body. Or card text. What does this look like? What does this feel like? How does this work? Does it need rich text? Will <a href="#">plaintext</a> do? Is markdown a useful compromise?</div>
     <div class="CardTags">  <a href="#">#ThisIsAnId</a> <a href="#">#AnotherOne</a></div>
   <div class="ModeCardFooter">
@@ -1287,7 +1299,7 @@ stylesheets:
     <a href="#" class="CardView">Pile</a>
     </div>
     
-  <h3 class="ModeCardName"><a href="#">Card Heading</a></h3>
+    {# <h3 class="ModeCardName"><a href="#">Card Heading</a></h3> #}
   <div class="ModeCardBody">This is a card body. Or card text. What does this look like? What does this feel like? How does this work? Does it need rich text? Will <a href="#">plaintext</a> do? Is markdown a useful compromise?</div>
     <div class="CardTags">  <a href="#">#ThisIsAnId</a> <a href="#">#AnotherOne</a></div>
   <div class="ModeCardFooter">
@@ -1309,7 +1321,7 @@ stylesheets:
     <a href="#" class="CardView">Pile</a>
     </div>
     
-  <h3 class="ModeCardName"><a href="#">Card Heading</a></h3>
+    {# <h3 class="ModeCardName"><a href="#">Card Heading</a></h3> #}
   <div class="ModeCardBody">This is a card body. Or card text. What does this look like? What does this feel like? How does this work? Does it need rich text? Will <a href="#">plaintext</a> do? Is markdown a useful compromise?</div>
     <div class="CardTags">  <a href="#">#ThisIsAnId</a> <a href="#">#AnotherOne</a></div>
   <div class="ModeCardFooter">
@@ -1336,7 +1348,7 @@ stylesheets:
   <span aria-hidden="true"></span></label>
     </div>
     
-  <h3 class="ModeCardName"><a href="#">Card Heading</a></h3>
+    {# <h3 class="ModeCardName"><a href="#">Card Heading</a></h3> #}
   <div class="ModeCardBody">This is a card body. Or card text. What does this look like? What does this feel like? How does this work? Does it need rich text? Will <a href="#">plaintext</a> do? Is markdown a useful compromise?</div>
     <div class="CardTags">  <a href="#">#ThisIsAnId</a> <a href="#">#AnotherOne</a></div>
   <div class="ModeCardFooter">
@@ -1357,7 +1369,7 @@ stylesheets:
     <a href="#" class="CardView">Pile</a>
     </div>
     
-  <h3 class="ModeCardName"><a href="#">Card Heading</a></h3>
+    {# <h3 class="ModeCardName"><a href="#">Card Heading</a></h3> #}
   <div class="ModeCardBody">This is a card body. Or card text. What does this look like? What does this feel like? How does this work? Does it need rich text? Will <a href="#">plaintext</a> do? Is markdown a useful compromise?</div>
     <div class="CardTags">  <a href="#">#ThisIsAnId</a> <a href="#">#AnotherOne</a></div>
   <div class="ModeCardFooter">
@@ -1379,7 +1391,7 @@ stylesheets:
     <a href="#" class="CardView">Pile</a>
     </div>
     
-  <h3 class="ModeCardName"><a href="#">Card Heading</a></h3>
+    {# <h3 class="ModeCardName"><a href="#">Card Heading</a></h3> #}
   <div class="ModeCardBody">This is a card body. Or card text. What does this look like? What does this feel like? How does this work? Does it need rich text? Will <a href="#">plaintext</a> do? Is markdown a useful compromise?</div>
     <div class="CardTags">  <a href="#">#ThisIsAnId</a> <a href="#">#AnotherOne</a></div>
   <div class="ModeCardFooter">
@@ -1404,7 +1416,7 @@ stylesheets:
   <span aria-hidden="true"></span></label>
     </div>
     
-  <h3 class="ModeCardName"><a href="#">Card Heading</a></h3>
+    {# <h3 class="ModeCardName"><a href="#">Card Heading</a></h3> #}
   <div class="ModeCardBody">This is a card body. Or card text. What does this look like? What does this feel like? How does this work? Does it need rich text? Will <a href="#">plaintext</a> do? Is markdown a useful compromise?</div>
     <div class="CardTags">  <a href="#">#ThisIsAnId</a> <a href="#">#AnotherOne</a></div>
   <div class="ModeCardFooter">
@@ -1425,7 +1437,7 @@ stylesheets:
     <a href="#" class="CardView">Pile</a>
     </div>
     
-  <h3 class="ModeCardName"><a href="#">Card Heading</a></h3>
+    {# <h3 class="ModeCardName"><a href="#">Card Heading</a></h3> #}
   <div class="ModeCardBody">This is a card body. Or card text. What does this look like? What does this feel like? How does this work? Does it need rich text? Will <a href="#">plaintext</a> do? Is markdown a useful compromise?</div>
     <div class="CardTags">  <a href="#">#ThisIsAnId</a> <a href="#">#AnotherOne</a></div>
   <div class="ModeCardFooter">
@@ -1456,7 +1468,7 @@ stylesheets:
     <a href="#" class="CardView">Pile</a>
     </div>
     
-  <h3 class="ModeCardName"><a href="#">Card Heading</a></h3>
+    {# <h3 class="ModeCardName"><a href="#">Card Heading</a></h3> #}
   <div class="ModeCardBody">This is a card body. Or card text. What does this look like? What does this feel like? How does this work? Does it need rich text? Will <a href="#">plaintext</a> do? Is markdown a useful compromise?</div>
     <div class="CardTags">  <a href="#">#ThisIsAnId</a> <a href="#">#AnotherOne</a></div>
   <div class="ModeCardFooter">
@@ -1483,7 +1495,7 @@ stylesheets:
     <a href="#" class="CardView">Pile</a>
     </div>
     
-  <h3 class="ModeCardName"><a href="#">Card Heading</a></h3>
+    {# <h3 class="ModeCardName"><a href="#">Card Heading</a></h3> #}
   <div class="ModeCardBody">This is a card body. Or card text. What does this look like? What does this feel like? How does this work? Does it need rich text? Will <a href="#">plaintext</a> do? Is markdown a useful compromise?</div>
     <div class="CardTags">  <a href="#">#ThisIsAnId</a> <a href="#">#AnotherOne</a></div>
   <div class="ModeCardFooter">
@@ -1505,7 +1517,7 @@ stylesheets:
     <a href="#" class="CardView">Pile</a>
     </div>
     
-  <h3 class="ModeCardName"><a href="#">Card Heading</a></h3>
+    {# <h3 class="ModeCardName"><a href="#">Card Heading</a></h3> #}
   <div class="ModeCardBody">This is a card body. Or card text. What does this look like? What does this feel like? How does this work? Does it need rich text? Will <a href="#">plaintext</a> do? Is markdown a useful compromise?</div>
     <div class="CardTags">  <a href="#">#ThisIsAnId</a> <a href="#">#AnotherOne</a></div>
   <div class="ModeCardFooter">
@@ -1527,7 +1539,7 @@ stylesheets:
     <a href="#" class="CardView">Pile</a>
     </div>
     
-  <h3 class="ModeCardName"><a href="#">Card Heading</a></h3>
+    {# <h3 class="ModeCardName"><a href="#">Card Heading</a></h3> #}
   <div class="ModeCardBody">This is a card body. Or card text. What does this look like? What does this feel like? How does this work? Does it need rich text? Will <a href="#">plaintext</a> do? Is markdown a useful compromise?</div>
     <div class="CardTags">  <a href="#">#ThisIsAnId</a> <a href="#">#AnotherOne</a></div>
   <div class="ModeCardFooter">
@@ -1651,7 +1663,7 @@ stylesheets:
   <span aria-hidden="true"></span></label>
     </div>
     
-  <h3 class="ModeCardName"><a href="#">Card Heading</a></h3>
+    {# <h3 class="ModeCardName"><a href="#">Card Heading</a></h3> #}
   <div class="ModeCardBody">This is a card body. Or card text. What does this look like? What does this feel like? How does this work? Does it need rich text? Will <a href="#">plaintext</a> do? Is markdown a useful compromise?</div>
     <div class="CardTags">  <a href="#">#ThisIsAnId</a> <a href="#">#AnotherOne</a></div>
   <div class="ModeCardFooter">
@@ -1675,7 +1687,7 @@ stylesheets:
   <span aria-hidden="true"></span></label>
     </div>
     
-  <h3 class="ModeCardName"><a href="#">Card Heading</a></h3>
+    {# <h3 class="ModeCardName"><a href="#">Card Heading</a></h3> #}
   <div class="ModeCardBody">This is a card body. Or card text. What does this look like? What does this feel like? How does this work? Does it need rich text? Will <a href="#">plaintext</a> do? Is markdown a useful compromise?</div>
     <div class="CardTags">  <a href="#">#ThisIsAnId</a> <a href="#">#AnotherOne</a></div>
   <div class="ModeCardFooter">
@@ -1696,7 +1708,7 @@ stylesheets:
     <a href="#" class="CardView">Pile</a>
     </div>
     
-  <h3 class="ModeCardName"><a href="#">Card Heading</a></h3>
+  {# <h3 class="ModeCardName"><a href="#">Card Heading</a></h3> #}
   <div class="ModeCardBody">This is a card body. Or card text. What does this look like? What does this feel like? How does this work? Does it need rich text? Will <a href="#">plaintext</a> do? Is markdown a useful compromise?</div>
     <div class="CardTags">  <a href="#">#ThisIsAnId</a> <a href="#">#AnotherOne</a></div>
   <div class="ModeCardFooter">
@@ -1736,18 +1748,18 @@ stylesheets:
   </div>
   </div> #}
   
-    <div class="ModeCard" data-editing="" data-stack-size="12" draggable="true" style="position: absolute; top: 20rem; left: 5rem; width: 28rem; touch-action: none;">
+    <div class="ModeCard" data-editing="" data-stack-size="12" draggable="true" style="position: absolute; top: 20rem; left: 5rem; width: var(--card-width); touch-action: none;">
     <div class="ModeCardGrabHandle">&nbsp;</div>
   <div class="ModeCardHeader">
     
-    <div class="CardDate"><a href="#">1 December 2021 · 13:25</a></div>
+    <div class="CardDate"><a href="#">This could be a longer example.</a></div>
     
   </div>
   <div class="ModeCardSwitch">
     <a href="#" class="CardView">Pile</a></div>
     
-  <h3 class="ModeCardName"><a href="#">Card Heading</a></h3>
-  <div class="ModeCardBody">This is a card body. Or card text. What does this look like? What does this feel like? How does this work? Does it need rich text? Will <a href="#">plaintext</a> do? Is markdown a useful compromise?</div>
+  {# <h3 class="ModeCardName"><a href="#">Card Heading</a></h3> #}
+  <div class="ModeCardBody">Darya Alexandrovna meanwhile having pacified the child, and knowing from the sound of the carriage that he had gone off, went back again to her bedroom. It was her solitary refuge from the household cares which crowded upon her directly she went out from it. Even now, in the short time she had been in the nursery, the English governess and Matrona Philimonovna had succeeded in putting several questions to her, which did not admit of delay, and which only she could answer: “What were the children to put on for their walk? Should they have any milk? Should not a new cook be sent for?”</div>
     <div class="CardTags">  <a href="#">#ThisIsAnId</a> <a href="#">#AnotherOne</a></div>
   <div class="ModeCardFooter">
     <div class="CardDate CardNumber"> <a href="#">6 more…</a></div>
@@ -1763,10 +1775,10 @@ stylesheets:
   </div>
   </div>
   
-<div class="ModeCard ImageCard" data-editing="" data-stack-size="0" style="position: absolute; top: 0rem; left: 35rem; width: 28rem; touch-action: none;">
-    <div class="ModeCardGrabHandle">&nbsp;</div>
+<div class="ModeCard ImageCard" data-editing="" data-stack-size="0" style="position: absolute; top: 0rem; left: 35rem; width: var(--card-width); touch-action: none;">
+    {# <div class="ModeCardGrabHandle">&nbsp;</div> #}
   <div class="ModeCardHeader">
-    <div class="CardDate">Gull photo, Parc Jarry, cropped. <em>1 December 2021 · 13:25</em></div>
+    <div class="CardDate">Gull photo, Parc Jarry, cropped. <a href="#">#ThisIsAnId</a> <a href="#">#AnotherOne</a></div>
   </div>
   <div class="ModeCardSwitch">
   <label class="check-switch">
@@ -1775,7 +1787,7 @@ stylesheets:
   <span aria-hidden="true"></span><span aria-hidden="true"></span></label></div>
     <figure>
       <img src="/images/gulls-injarry.jpg" alt="A raven flies against some darkened clouds">
-      <figcaption>A gull flies during sunset in Parc Jarry<br>  <a href="#">#ThisIsAnId</a> <a href="#">#AnotherOne</a></figcaption>
+      <figcaption>A gull flies during sunset in Parc Jarry<br>   <em>1 December 2021 · 13:25</em></figcaption>
     </figure>
   <div class="ModeCardFooter">
   
