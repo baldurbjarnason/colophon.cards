@@ -51,7 +51,7 @@
     var(--color-blue),
     var(--color-active-blue)
   );
-  --card-margin: 3rem;
+  --card-margin: 2.5rem;
   --shadow-color: 38deg 30% 60%;
   --shadow-elevation-lower: 0.4px 0.8px 1px -1.2px hsl(var(--shadow-color) /
           0.34),
