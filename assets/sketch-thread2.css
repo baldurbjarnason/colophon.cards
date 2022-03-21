@@ -265,7 +265,7 @@ a:link {
   left: calc(var(--card-width) + 5rem);
   bottom: 0;
   background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='32' height='32'><circle cx='1' cy='1' r='1' fill='%2333333333' /></svg>");
-  background-color: rgb(255 255 255 / 0.5);
+  background-color: rgb(255 255 255 / 0.95);
   /* background-image: radial-gradient(
     circle at 2px 2px,
     #33333366 1px,
@@ -273,7 +273,7 @@ a:link {
   ); */
   z-index: -5;
   background-size: 2rem 2rem, 100% 100%;
-  box-shadow: 0 0 1rem 1rem rgb(255 255 255 / 0.5);
+  box-shadow: 0 0 1rem 1rem rgb(255 255 255 / 0.95);
   /* In the actual implementation this would be a CSS variable that defaults to this but would be updated based on card positions */
   min-width: calc(100vw - var(--card-width));
 }
