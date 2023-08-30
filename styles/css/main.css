@@ -36,3 +36,15 @@ main > * {
   margin-bottom: 0;
   text-align: justify;
 }
+
+.Note {
+  background-color: white;
+  padding: 2rem;
+  font-size: 1.25rem;
+  outline: 1rem solid #333;
+  margin: 2rem 0;
+}
+
+.Note p {
+  text-align: left;
+}

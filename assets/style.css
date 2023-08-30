@@ -53,7 +53,7 @@ html {
   color: var(--base-color);
 }
 body {
-  background-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZlcnNpb249IjEuMiIgYmFzZVByb2ZpbGU9InRpbnkiIHdpZHRoPSI2ODIiIGhlaWdodD0iMTAyNCIgc3R5bGU9ImJhY2tncm91bmQtY29sb3I6dHJhbnNwYXJlbnQiIG9wYWNpdHk9Ii4wNjEiPjxwYXRoIGZpbGw9IiM1QzYxNjciIGZpbGwtb3BhY2l0eT0iLjUwMiIgZD0iTTAgNDc5VjBoMjE3eiIvPjxwYXRoIGZpbGw9IiM2QjcxNzciIGZpbGwtb3BhY2l0eT0iLjUwMiIgZD0ibTI5NCAwIDM4NiA0ODkgMi00ODl6Ii8+PC9zdmc+);
+  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" version="1.2" baseProfile="tiny" width="682" height="1024" style="background-color:transparent" opacity=".061"><path fill="%235C6167" fill-opacity=".502" d="M0 479V0h217z"/><path fill="%236B7177" fill-opacity=".502" d="m294 0 386 489 2-489z"/></svg>');
   background-size: contain;
   background-repeat: no-repeat;
 }
@@ -129,6 +129,16 @@ main > * {
   margin-top: 0;
   margin-bottom: 0;
   text-align: justify;
+}
+.Note {
+  background-color: white;
+  padding: 2rem;
+  font-size: 1.25rem;
+  outline: 1rem solid #333;
+  margin: 2rem 0;
+}
+.Note p {
+  text-align: left;
 }
 
 /* styles/css/img.css */

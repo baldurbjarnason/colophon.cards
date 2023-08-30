@@ -42,24 +42,24 @@
     {% for item in collections.posts %}
     <li{% if page.url == item.url %} aria-current="page"{% endif %}><a href="{{item.url}}">{{ item.data.title }}</a></li>
     {% endfor %}
+    <li><a href="https://www.baldurbjarnason.com/2022/why-people-use-markdown/">What I learned about markdown from interviewing a bunch of people (baldurbjarnason.com)</a></li>
+    <li><a href="https://www.baldurbjarnason.com/2022/the-different-kinds-of-notes/">The different kinds of notes (baldurbjarnason.com)</a></li>
+    <li><a href="https://www.baldurbjarnason.com/2022/on-online-collaboration/">On online collaboration and our obligations as makers of software (baldurbjarnason.com)</a></li>
         </ol>
       </nav>
     </ul>
       {% block main %}
       <main class="source-serif-ss03 source-serif-slashed-zero source-serif">
         <div class="time">{{page.date.toLocaleDateString("en-GB", { year: 'numeric', month: 'long', day: 'numeric' })}}</div>
+
+{% include 'note.njk' %}
+
+
           {{ content | safe }}
       </main>
       {% endblock %}
       {%block footer %}
       <footer>
-        <p>
-          Follow along using the <a href="/feed.xml">feed</a>.
-      </p>
-        <p>
-    
-          Discuss or comment on this in the <a href="https://github.com/baldurbjarnason/colophon.cards">GitHub repository</a>
-      </p>
       <p>
         This project is made possible by a grant from <a href="https://en.rannis.is/funding/research/technology-development-fund/nr/545">The Icelandic Centre for Research's Technology Development Fund</a>
       </p>

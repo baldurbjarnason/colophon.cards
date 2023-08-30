@@ -7,8 +7,6 @@ date: 2021-11-17
 
 # Attachments and Bookmarks
 
-(I liked this note so much that I reworked it into the main pitch for Colophon Cards and put it on the [front page](/).)
-
 ## Why does Colophon Cards need attachments and bookmarks?
 
 Ever had an important document or bookmark, which you _know_ you saved somewhere, and you _know_ was filed somewhere clever, but can't for the life of you find again?
